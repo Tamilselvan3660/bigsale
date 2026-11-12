@@ -1,0 +1,108 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bigsale-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: bigsale
+      POSTGRES_PASSWORD: bigsale_secret
+      POSTGRES_DB: bigsale
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bigsale -d bigsale"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bigsale-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: bigsale-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bigsale-network
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: bigsale-mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI
+    networks:
+      - bigsale-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: bigsale-backend
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      NODE_ENV: development
+      DATABASE_URL: "postgresql://bigsale:bigsale_secret@postgres:5432/bigsale?schema=public"
+      JWT_SECRET: "supersecretjwtkey_bigsale_ecommerce_2026_dev_prod"
+      JWT_EXPIRES_IN: "7d"
+      STRIPE_SECRET_KEY: "sk_test_placeholder"
+      STRIPE_WEBHOOK_SECRET: "whsec_placeholder"
+      CORS_ORIGIN: "http://localhost:5173,http://localhost:3000"
+      REDIS_URL: "redis://redis:6379"
+      SMTP_HOST: "mailhog"
+      SMTP_PORT: 1025
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - bigsale-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: bigsale-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: "http://localhost:4000/api"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - bigsale-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  bigsale-network:
+    driver: bridge

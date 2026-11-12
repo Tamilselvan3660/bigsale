@@ -1,0 +1,3393 @@
+{
+  "users": [
+    {
+      "id": "id_1",
+      "email": "admin@bigsale.com",
+      "password": "$2b$10$vaAgNwtqdBz5Ect3KFPWie2a1p7qMpqAKxHtPCaY5fKrS4c1wsb7W",
+      "firstName": "John",
+      "lastName": "Admin",
+      "phone": "+1-555-0100",
+      "role": "ADMIN",
+      "isActive": true,
+      "isVerified": true,
+      "cart": {
+        "create": {}
+      },
+      "wishlist": {
+        "create": {}
+      }
+    },
+    {
+      "id": "id_2",
+      "email": "customer@bigsale.com",
+      "password": "$2b$10$INLgmqTjimBLByBhWLWs/eg.U8S9eMEQ70QSe0zLexWgOxTvSkOGu",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "phone": "+1-555-0199",
+      "role": "CUSTOMER",
+      "isActive": true,
+      "isVerified": true,
+      "cart": {
+        "create": {}
+      },
+      "wishlist": {
+        "create": {}
+      },
+      "addresses": {
+        "create": [
+          {
+            "fullName": "Jane Doe",
+            "phone": "+1-555-0199",
+            "addressLine1": "742 Evergreen Terrace",
+            "addressLine2": "Apt 4B",
+            "city": "Springfield",
+            "state": "Oregon",
+            "postalCode": "97477",
+            "country": "US",
+            "isDefault": true
+          },
+          {
+            "fullName": "Jane Doe Work",
+            "phone": "+1-555-0199",
+            "addressLine1": "100 Tech Blvd",
+            "city": "Springfield",
+            "state": "Oregon",
+            "postalCode": "97401",
+            "country": "US",
+            "isDefault": false
+          }
+        ]
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "id_3",
+      "name": "Electronics",
+      "slug": "electronics",
+      "description": "Smartphones, computers, audio, wearable tech and accessories.",
+      "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+      "isFeatured": true,
+      "isActive": true
+    },
+    {
+      "id": "id_4",
+      "name": "Fashion & Apparel",
+      "slug": "fashion-apparel",
+      "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+      "isFeatured": true,
+      "isActive": true
+    },
+    {
+      "id": "id_5",
+      "name": "Home & Kitchen",
+      "slug": "home-kitchen",
+      "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+      "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+      "isFeatured": true,
+      "isActive": true
+    },
+    {
+      "id": "id_6",
+      "name": "Beauty & Personal Care",
+      "slug": "beauty-personal-care",
+      "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+      "isFeatured": true,
+      "isActive": true
+    },
+    {
+      "id": "id_7",
+      "name": "Sports & Outdoors",
+      "slug": "sports-outdoors",
+      "description": "High-performance athletic gear, fitness machines, and outdoor camping.",
+      "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+      "isFeatured": false,
+      "isActive": true
+    },
+    {
+      "id": "id_8",
+      "name": "Books & Stationery",
+      "slug": "books-stationery",
+      "description": "Bestselling books, journals, pens, and fine office stationery.",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800",
+      "isFeatured": false,
+      "isActive": true
+    },
+    {
+      "id": "id_9",
+      "name": "Toys & Baby",
+      "slug": "toys-baby",
+      "description": "Educational toys, nursery furniture, and child care essentials.",
+      "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800",
+      "isFeatured": false,
+      "isActive": true
+    },
+    {
+      "id": "id_10",
+      "name": "Automotive & Tools",
+      "slug": "automotive-tools",
+      "description": "Vehicle maintenance, car electronics, and precision power tools.",
+      "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800",
+      "isFeatured": false,
+      "isActive": true
+    },
+    {
+      "id": "id_11",
+      "name": "Health & Wellness",
+      "slug": "health-wellness",
+      "description": "Supplements, health monitors, ergonomic gear, and wellness products.",
+      "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
+      "isFeatured": false,
+      "isActive": true
+    },
+    {
+      "id": "id_12",
+      "name": "Gourmet & Grocery",
+      "slug": "gourmet-grocery",
+      "description": "Artisan coffee, snacks, organic condiments, and specialty foods.",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800",
+      "isFeatured": false,
+      "isActive": true
+    }
+  ],
+  "brands": [
+    {
+      "id": "id_13",
+      "name": "Apple",
+      "slug": "apple",
+      "description": "Think Different. Premium consumer electronics and computing.",
+      "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+      "website": "https://www.apple.com",
+      "isActive": true
+    },
+    {
+      "id": "id_14",
+      "name": "Samsung",
+      "slug": "samsung",
+      "description": "Inspire the World, Create the Future with groundbreaking technology.",
+      "logo": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300",
+      "website": "https://www.samsung.com",
+      "isActive": true
+    },
+    {
+      "id": "id_15",
+      "name": "Sony",
+      "slug": "sony",
+      "description": "Be Moved. World leader in audio, visual, and gaming entertainment.",
+      "logo": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300",
+      "website": "https://www.sony.com",
+      "isActive": true
+    },
+    {
+      "id": "id_16",
+      "name": "Nike",
+      "slug": "nike",
+      "description": "Just Do It. World premier athletic footwear and apparel.",
+      "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+      "website": "https://www.nike.com",
+      "isActive": true
+    },
+    {
+      "id": "id_17",
+      "name": "Adidas",
+      "slug": "adidas",
+      "description": "Impossible Is Nothing. Iconic sportswear and footwear brand.",
+      "logo": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=300",
+      "website": "https://www.adidas.com",
+      "isActive": true
+    },
+    {
+      "id": "id_18",
+      "name": "Puma",
+      "slug": "puma",
+      "description": "Forever Faster. Sports performance and athletic lifestyle wear.",
+      "logo": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300",
+      "website": "https://www.puma.com",
+      "isActive": true
+    },
+    {
+      "id": "id_19",
+      "name": "LG Electronics",
+      "slug": "lg",
+      "description": "Life's Good. Cutting-edge display technology and home appliances.",
+      "logo": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300",
+      "website": "https://www.lg.com",
+      "isActive": true
+    },
+    {
+      "id": "id_20",
+      "name": "Dell",
+      "slug": "dell",
+      "description": "Transforming computing and productivity across laptops and monitors.",
+      "logo": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=300",
+      "website": "https://www.dell.com",
+      "isActive": true
+    },
+    {
+      "id": "id_21",
+      "name": "Bose",
+      "slug": "bose",
+      "description": "Better Sound Through Research. Noise cancelling headphones and speakers.",
+      "logo": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300",
+      "website": "https://www.bose.com",
+      "isActive": true
+    },
+    {
+      "id": "id_22",
+      "name": "Philips",
+      "slug": "philips",
+      "description": "Innovation and You. Health, personal care, and domestic appliances.",
+      "logo": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=300",
+      "website": "https://www.philips.com",
+      "isActive": true
+    },
+    {
+      "id": "id_23",
+      "name": "Dyson",
+      "slug": "dyson",
+      "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+      "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+      "website": "https://www.dyson.com",
+      "isActive": true
+    },
+    {
+      "id": "id_24",
+      "name": "Levi's",
+      "slug": "levis",
+      "description": "Quality Never Goes Out of Style. The pioneer of American denim.",
+      "logo": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300",
+      "website": "https://www.levi.com",
+      "isActive": true
+    },
+    {
+      "id": "id_25",
+      "name": "L'Oreal",
+      "slug": "loreal",
+      "description": "Because You're Worth It. Global leader in beauty and cosmetics.",
+      "logo": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300",
+      "website": "https://www.loreal.com",
+      "isActive": true
+    },
+    {
+      "id": "id_26",
+      "name": "Canon",
+      "slug": "canon",
+      "description": "Delighting You Always. Cameras, lenses, and imaging excellence.",
+      "logo": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300",
+      "website": "https://www.canon.com",
+      "isActive": true
+    },
+    {
+      "id": "id_27",
+      "name": "Rolex",
+      "slug": "rolex",
+      "description": "A Crown for Every Achievement. Renowned luxury Swiss chronometers.",
+      "logo": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=300",
+      "website": "https://www.rolex.com",
+      "isActive": true
+    }
+  ],
+  "coupons": [
+    {
+      "id": "id_28",
+      "code": "WELCOME10",
+      "description": "10% discount on orders over $50 for new shoppers",
+      "discountType": "PERCENTAGE",
+      "discountValue": 10,
+      "minOrderAmount": 50,
+      "maxDiscount": 25,
+      "usageLimit": 1000,
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "endDate": "2027-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "id_29",
+      "code": "BIGSALE20",
+      "description": "20% off on orders above $100 up to $50 maximum discount",
+      "discountType": "PERCENTAGE",
+      "discountValue": 20,
+      "minOrderAmount": 100,
+      "maxDiscount": 50,
+      "usageLimit": 500,
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "endDate": "2027-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "id_30",
+      "code": "FLAT50",
+      "description": "Flat $50 discount on premium orders of $250 or more",
+      "discountType": "FIXED",
+      "discountValue": 50,
+      "minOrderAmount": 250,
+      "usageLimit": 200,
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "endDate": "2027-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "id_31",
+      "code": "FREESHIP",
+      "description": "$10 shipping credit voucher on orders over $30",
+      "discountType": "FIXED",
+      "discountValue": 10,
+      "minOrderAmount": 30,
+      "usageLimit": 2000,
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "endDate": "2027-12-31T00:00:00.000Z"
+    },
+    {
+      "id": "id_32",
+      "code": "SUPERVIP",
+      "description": "Exclusive 25% VIP savings up to $100 discount",
+      "discountType": "PERCENTAGE",
+      "discountValue": 25,
+      "minOrderAmount": 150,
+      "maxDiscount": 100,
+      "usageLimit": 100,
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "endDate": "2027-12-31T00:00:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "id_33",
+      "name": "Apple iPhone 16 Pro Max 256GB",
+      "slug": "iphone-16-pro-max-256gb",
+      "sku": "APL-IP16PM-256",
+      "description": "Titanium design with A18 Pro chip, 48MP Fusion camera system, and industry-leading battery life.",
+      "shortDescription": "Flagship smartphone with titanium design and A18 Pro chip.",
+      "price": 1199,
+      "compareAtPrice": 1299,
+      "costPrice": 950,
+      "stock": 45,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+          "altText": "Apple iPhone 16 Pro Max 256GB",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple iPhone 16 Pro Max 256GB. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_34",
+      "name": "Apple MacBook Pro 16\" M3 Max",
+      "slug": "macbook-pro-16-m3-max",
+      "sku": "APL-MBP16-M3M",
+      "description": "Astonishing 16-core CPU, 40-core GPU, Liquid Retina XDR display, and up to 22 hours of battery life.",
+      "shortDescription": "Ultimate workstation laptop for developers and creators.",
+      "price": 3499,
+      "compareAtPrice": 3699,
+      "costPrice": 2800,
+      "stock": 20,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "altText": "Apple MacBook Pro 16\" M3 Max",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple MacBook Pro 16\" M3 Max. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_35",
+      "name": "Apple AirPods Max Wireless Headphones",
+      "slug": "apple-airpods-max",
+      "sku": "APL-AP-MAX",
+      "description": "High-fidelity audio, Active Noise Cancellation with Transparency mode, and computational spatial audio.",
+      "shortDescription": "Over-ear headphones with active noise cancellation.",
+      "price": 549,
+      "compareAtPrice": 599,
+      "costPrice": 420,
+      "stock": 35,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
+          "altText": "Apple AirPods Max Wireless Headphones",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple AirPods Max Wireless Headphones. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_36",
+      "name": "Apple Watch Ultra 2 Titanium GPS + Cellular",
+      "slug": "apple-watch-ultra-2",
+      "sku": "APL-AWU-2",
+      "description": "The most capable smartwatch with 3000 nits display, dual-frequency GPS, and up to 72 hours in Low Power Mode.",
+      "shortDescription": "Rugged smartwatch built for endurance athletes and adventurers.",
+      "price": 799,
+      "compareAtPrice": 849,
+      "costPrice": 620,
+      "stock": 25,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800",
+          "altText": "Apple Watch Ultra 2 Titanium GPS + Cellular",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple Watch Ultra 2 Titanium GPS + Cellular. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_37",
+      "name": "Samsung Galaxy S24 Ultra 512GB",
+      "slug": "samsung-galaxy-s24-ultra",
+      "sku": "SAM-S24U-512",
+      "description": "Galaxy AI is here. 200MP camera, built-in S Pen, titanium shield, and Snapdragon 8 Gen 3 for Galaxy.",
+      "shortDescription": "Premium AI smartphone with 200MP camera and stylus.",
+      "price": 1299,
+      "compareAtPrice": 1419,
+      "costPrice": 1000,
+      "stock": 50,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_14",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+          "altText": "Samsung Galaxy S24 Ultra 512GB",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Samsung Galaxy S24 Ultra 512GB. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_14",
+        "name": "Samsung",
+        "slug": "samsung",
+        "description": "Inspire the World, Create the Future with groundbreaking technology.",
+        "logo": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300",
+        "website": "https://www.samsung.com"
+      }
+    },
+    {
+      "id": "id_38",
+      "name": "Samsung 65\" Neo QLED 4K Smart TV",
+      "slug": "samsung-65-neo-qled-4k",
+      "sku": "SAM-TV65-NQ",
+      "description": "Quantum Matrix Technology with Mini LEDs, Neural Quantum Processor 4K, and immersive Dolby Atmos sound.",
+      "shortDescription": "Ultra-thin 4K smart television with Quantum Mini LEDs.",
+      "price": 1599,
+      "compareAtPrice": 1899,
+      "costPrice": 1200,
+      "stock": 15,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_14",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800",
+          "altText": "Samsung 65\" Neo QLED 4K Smart TV",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Samsung 65\" Neo QLED 4K Smart TV. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_14",
+        "name": "Samsung",
+        "slug": "samsung",
+        "description": "Inspire the World, Create the Future with groundbreaking technology.",
+        "logo": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300",
+        "website": "https://www.samsung.com"
+      }
+    },
+    {
+      "id": "id_39",
+      "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+      "slug": "sony-wh-1000xm5",
+      "sku": "SNY-WH1000XM5",
+      "description": "Industry-leading noise canceling with two processors, 8 microphones, and ultra-comfortable lightweight design.",
+      "shortDescription": "Award-winning noise cancelling wireless headphones.",
+      "price": 399,
+      "compareAtPrice": 429,
+      "costPrice": 290,
+      "stock": 60,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_15",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+          "altText": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Sony WH-1000XM5 Wireless Noise-Canceling Headphones. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_15",
+        "name": "Sony",
+        "slug": "sony",
+        "description": "Be Moved. World leader in audio, visual, and gaming entertainment.",
+        "logo": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300",
+        "website": "https://www.sony.com"
+      }
+    },
+    {
+      "id": "id_40",
+      "name": "Sony PlayStation 5 Pro Console",
+      "slug": "sony-playstation-5-pro",
+      "sku": "SNY-PS5-PRO",
+      "description": "Enhanced GPU, advanced ray tracing, and PlayStation Spectral Super Resolution for pristine 4K gaming at 60fps.",
+      "shortDescription": "Next-generation high performance gaming console.",
+      "price": 699,
+      "compareAtPrice": 749,
+      "costPrice": 580,
+      "stock": 18,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_15",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+          "altText": "Sony PlayStation 5 Pro Console",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Sony PlayStation 5 Pro Console. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_15",
+        "name": "Sony",
+        "slug": "sony",
+        "description": "Be Moved. World leader in audio, visual, and gaming entertainment.",
+        "logo": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300",
+        "website": "https://www.sony.com"
+      }
+    },
+    {
+      "id": "id_41",
+      "name": "Dell XPS 15 9530 OLED Touch Laptop",
+      "slug": "dell-xps-15-oled",
+      "sku": "DEL-XPS15-OLED",
+      "description": "13th Gen Intel Core i9, RTX 4070 GPU, 3.5K OLED InfinityEdge touch screen in platinum silver aluminum.",
+      "shortDescription": "High-end workstation laptop with 3.5K OLED touch display.",
+      "price": 2299,
+      "compareAtPrice": 2599,
+      "costPrice": 1850,
+      "stock": 14,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_20",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+          "altText": "Dell XPS 15 9530 OLED Touch Laptop",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dell XPS 15 9530 OLED Touch Laptop. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_20",
+        "name": "Dell",
+        "slug": "dell",
+        "description": "Transforming computing and productivity across laptops and monitors.",
+        "logo": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=300",
+        "website": "https://www.dell.com"
+      }
+    },
+    {
+      "id": "id_42",
+      "name": "Bose QuietComfort Ultra Headphones",
+      "slug": "bose-quietcomfort-ultra",
+      "sku": "BOS-QCU-01",
+      "description": "World-class noise cancellation, breakthrough spatial audio, and CustomTune technology for personalized sound.",
+      "shortDescription": "Spatial audio wireless headphones with active noise cancellation.",
+      "price": 429,
+      "compareAtPrice": 479,
+      "costPrice": 310,
+      "stock": 40,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_21",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
+          "altText": "Bose QuietComfort Ultra Headphones",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Bose QuietComfort Ultra Headphones. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_21",
+        "name": "Bose",
+        "slug": "bose",
+        "description": "Better Sound Through Research. Noise cancelling headphones and speakers.",
+        "logo": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300",
+        "website": "https://www.bose.com"
+      }
+    },
+    {
+      "id": "id_43",
+      "name": "Nike Air Jordan 1 Retro High OG",
+      "slug": "nike-air-jordan-1-retro-high",
+      "sku": "NKE-AJ1-OG",
+      "description": "Familiar style crafted from genuine full-grain leather with Air-Sole unit encapsulation in the heel.",
+      "shortDescription": "Classic basketball sneaker in iconic colorway.",
+      "price": 180,
+      "compareAtPrice": 210,
+      "costPrice": 90,
+      "stock": 55,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_16",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+          "altText": "Nike Air Jordan 1 Retro High OG",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Nike Air Jordan 1 Retro High OG. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_16",
+        "name": "Nike",
+        "slug": "nike",
+        "description": "Just Do It. World premier athletic footwear and apparel.",
+        "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        "website": "https://www.nike.com"
+      }
+    },
+    {
+      "id": "id_44",
+      "name": "Nike Air Max 270 React",
+      "slug": "nike-air-max-270-react",
+      "sku": "NKE-AM270-R",
+      "description": "Lifestyle sneaker combining Nike React foam technology with the largest Air Max heel unit for supreme comfort.",
+      "shortDescription": "Modern cushioned running and lifestyle sneakers.",
+      "price": 160,
+      "compareAtPrice": 180,
+      "costPrice": 85,
+      "stock": 70,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_16",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=800",
+          "altText": "Nike Air Max 270 React",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Nike Air Max 270 React. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_16",
+        "name": "Nike",
+        "slug": "nike",
+        "description": "Just Do It. World premier athletic footwear and apparel.",
+        "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        "website": "https://www.nike.com"
+      }
+    },
+    {
+      "id": "id_45",
+      "name": "Nike Dri-FIT Tech Fleece Tracksuit",
+      "slug": "nike-tech-fleece-tracksuit",
+      "sku": "NKE-TF-TRK",
+      "description": "Premium lightweight fleece smooth both inside and out for low-profile warmth without extra bulk.",
+      "shortDescription": "Full zip jacket and jogger sweatpants combo.",
+      "price": 240,
+      "compareAtPrice": 280,
+      "costPrice": 120,
+      "stock": 40,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_16",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
+          "altText": "Nike Dri-FIT Tech Fleece Tracksuit",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Nike Dri-FIT Tech Fleece Tracksuit. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_16",
+        "name": "Nike",
+        "slug": "nike",
+        "description": "Just Do It. World premier athletic footwear and apparel.",
+        "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        "website": "https://www.nike.com"
+      }
+    },
+    {
+      "id": "id_46",
+      "name": "Adidas Ultraboost Light Running Shoes",
+      "slug": "adidas-ultraboost-light",
+      "sku": "ADI-UB-LGT",
+      "description": "Light Boost midsole material offers 30% lighter energy return for smooth, responsive marathon training.",
+      "shortDescription": "High-cushioning running shoes for long distance comfort.",
+      "price": 190,
+      "compareAtPrice": 220,
+      "costPrice": 95,
+      "stock": 65,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_17",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=800",
+          "altText": "Adidas Ultraboost Light Running Shoes",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Adidas Ultraboost Light Running Shoes. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_17",
+        "name": "Adidas",
+        "slug": "adidas",
+        "description": "Impossible Is Nothing. Iconic sportswear and footwear brand.",
+        "logo": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=300",
+        "website": "https://www.adidas.com"
+      }
+    },
+    {
+      "id": "id_47",
+      "name": "Adidas Originals Samba Classic Leather",
+      "slug": "adidas-samba-classic",
+      "sku": "ADI-SAMBA-01",
+      "description": "Classic indoor soccer shoe made of full-grain leather with suede overlays and distinctive gum rubber outsole.",
+      "shortDescription": "Heritage low-profile street style sneaker.",
+      "price": 100,
+      "compareAtPrice": 120,
+      "costPrice": 50,
+      "stock": 90,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_17",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=800",
+          "altText": "Adidas Originals Samba Classic Leather",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Adidas Originals Samba Classic Leather. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_17",
+        "name": "Adidas",
+        "slug": "adidas",
+        "description": "Impossible Is Nothing. Iconic sportswear and footwear brand.",
+        "logo": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=300",
+        "website": "https://www.adidas.com"
+      }
+    },
+    {
+      "id": "id_48",
+      "name": "Puma Suede Classic XXI Sneakers",
+      "slug": "puma-suede-classic-xxi",
+      "sku": "PUM-SUD-21",
+      "description": "Full suede upper with synthetic lining, comfortable sockliner, and iconic Puma formstrip at medial sides.",
+      "shortDescription": "Timeless street sneaker with premium suede finish.",
+      "price": 75,
+      "compareAtPrice": 90,
+      "costPrice": 38,
+      "stock": 80,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_18",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800",
+          "altText": "Puma Suede Classic XXI Sneakers",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Puma Suede Classic XXI Sneakers. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_18",
+        "name": "Puma",
+        "slug": "puma",
+        "description": "Forever Faster. Sports performance and athletic lifestyle wear.",
+        "logo": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300",
+        "website": "https://www.puma.com"
+      }
+    },
+    {
+      "id": "id_49",
+      "name": "Levi's 501 Original Fit Jeans",
+      "slug": "levis-501-original-fit-jeans",
+      "sku": "LEV-501-ORG",
+      "description": "The archetype of all jeans, featuring timeless straight leg cut and signature button fly in 100% cotton.",
+      "shortDescription": "Classic straight-leg denim jeans with button fly.",
+      "price": 89.5,
+      "compareAtPrice": 98,
+      "costPrice": 42,
+      "stock": 120,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_24",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800",
+          "altText": "Levi's 501 Original Fit Jeans",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Levi's 501 Original Fit Jeans. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_24",
+        "name": "Levi's",
+        "slug": "levis",
+        "description": "Quality Never Goes Out of Style. The pioneer of American denim.",
+        "logo": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300",
+        "website": "https://www.levi.com"
+      }
+    },
+    {
+      "id": "id_50",
+      "name": "Levi's Sherpa Lined Denim Trucker Jacket",
+      "slug": "levis-sherpa-trucker-jacket",
+      "sku": "LEV-SHP-TRK",
+      "description": "Cozy sherpa lining inside warm, insulated sleeves with authentic vintage stone wash denim exterior.",
+      "shortDescription": "Warm sherpa-lined winter denim jacket.",
+      "price": 128,
+      "compareAtPrice": 148,
+      "costPrice": 65,
+      "stock": 35,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_24",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800",
+          "altText": "Levi's Sherpa Lined Denim Trucker Jacket",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Levi's Sherpa Lined Denim Trucker Jacket. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_24",
+        "name": "Levi's",
+        "slug": "levis",
+        "description": "Quality Never Goes Out of Style. The pioneer of American denim.",
+        "logo": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300",
+        "website": "https://www.levi.com"
+      }
+    },
+    {
+      "id": "id_51",
+      "name": "Rolex Submariner Date 41mm Oystersteel",
+      "slug": "rolex-submariner-date-41",
+      "sku": "ROL-SUB-41D",
+      "description": "Cerachrom ceramic bezel insert, black dial with large luminescent hour markers, waterproof to 300 meters.",
+      "shortDescription": "The benchmark of luxury diving chronometers.",
+      "price": 10250,
+      "compareAtPrice": 11500,
+      "costPrice": 8200,
+      "stock": 3,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_27",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800",
+          "altText": "Rolex Submariner Date 41mm Oystersteel",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Rolex Submariner Date 41mm Oystersteel. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_27",
+        "name": "Rolex",
+        "slug": "rolex",
+        "description": "A Crown for Every Achievement. Renowned luxury Swiss chronometers.",
+        "logo": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=300",
+        "website": "https://www.rolex.com"
+      }
+    },
+    {
+      "id": "id_52",
+      "name": "Dyson V15 Detect Cordless Vacuum Cleaner",
+      "slug": "dyson-v15-detect",
+      "sku": "DYS-V15-DET",
+      "description": "Laser reveals invisible dust, acoustic piezo sensor measures particles, and hyperdymium motor spins at 125,000rpm.",
+      "shortDescription": "Intelligent laser-guided cordless vacuum.",
+      "price": 749.99,
+      "compareAtPrice": 849.99,
+      "costPrice": 520,
+      "stock": 22,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_5",
+      "brandId": "id_23",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800",
+          "altText": "Dyson V15 Detect Cordless Vacuum Cleaner",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dyson V15 Detect Cordless Vacuum Cleaner. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_5",
+        "name": "Home & Kitchen",
+        "slug": "home-kitchen",
+        "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_23",
+        "name": "Dyson",
+        "slug": "dyson",
+        "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+        "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+        "website": "https://www.dyson.com"
+      }
+    },
+    {
+      "id": "id_53",
+      "name": "Dyson Purifier Hot+Cool Formaldehyde HP09",
+      "slug": "dyson-purifier-hp09",
+      "sku": "DYS-HP09-PUR",
+      "description": "Destroys formaldehyde, HEPA H13 filtration removes 99.97% of allergens, heats in winter, and cools in summer.",
+      "shortDescription": "3-in-1 HEPA air purifier, heater, and cooling fan.",
+      "price": 849.99,
+      "compareAtPrice": 949.99,
+      "costPrice": 610,
+      "stock": 16,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_5",
+      "brandId": "id_23",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800",
+          "altText": "Dyson Purifier Hot+Cool Formaldehyde HP09",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dyson Purifier Hot+Cool Formaldehyde HP09. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_5",
+        "name": "Home & Kitchen",
+        "slug": "home-kitchen",
+        "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_23",
+        "name": "Dyson",
+        "slug": "dyson",
+        "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+        "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+        "website": "https://www.dyson.com"
+      }
+    },
+    {
+      "id": "id_54",
+      "name": "Philips 3200 Series Fully Automatic Espresso Machine",
+      "slug": "philips-3200-espresso-machine",
+      "sku": "PHI-EP3246",
+      "description": "LatteGo milk frother creates silky smooth foam, intuitive touch display, and 100% ceramic grinders for 20,000 cups.",
+      "shortDescription": "Automatic bean-to-cup espresso and latte maker.",
+      "price": 699,
+      "compareAtPrice": 799,
+      "costPrice": 480,
+      "stock": 28,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_5",
+      "brandId": "id_22",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800",
+          "altText": "Philips 3200 Series Fully Automatic Espresso Machine",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Philips 3200 Series Fully Automatic Espresso Machine. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_5",
+        "name": "Home & Kitchen",
+        "slug": "home-kitchen",
+        "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_22",
+        "name": "Philips",
+        "slug": "philips",
+        "description": "Innovation and You. Health, personal care, and domestic appliances.",
+        "logo": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=300",
+        "website": "https://www.philips.com"
+      }
+    },
+    {
+      "id": "id_55",
+      "name": "Philips XXL Airfryer with Smart Sensing",
+      "slug": "philips-xxl-airfryer",
+      "sku": "PHI-HD9867",
+      "description": "Fat removal technology extracts excess grease, smart chef programs automatically set temperature and time.",
+      "shortDescription": "Family-size digital airfryer for healthier cooking.",
+      "price": 299.95,
+      "compareAtPrice": 349.95,
+      "costPrice": 190,
+      "stock": 45,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_5",
+      "brandId": "id_22",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=800",
+          "altText": "Philips XXL Airfryer with Smart Sensing",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Philips XXL Airfryer with Smart Sensing. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_5",
+        "name": "Home & Kitchen",
+        "slug": "home-kitchen",
+        "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_22",
+        "name": "Philips",
+        "slug": "philips",
+        "description": "Innovation and You. Health, personal care, and domestic appliances.",
+        "logo": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=300",
+        "website": "https://www.philips.com"
+      }
+    },
+    {
+      "id": "id_56",
+      "name": "LG InstaView Door-in-Door Smart Refrigerator",
+      "slug": "lg-instaview-refrigerator",
+      "sku": "LG-LFXS28596S",
+      "description": "Knock twice to see inside without letting cold air out. Craft Ice maker creates slow-melting spherical ice balls.",
+      "shortDescription": "French door smart refrigerator with tinted glass panel.",
+      "price": 2499,
+      "compareAtPrice": 2899,
+      "costPrice": 1950,
+      "stock": 8,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_5",
+      "brandId": "id_19",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=800",
+          "altText": "LG InstaView Door-in-Door Smart Refrigerator",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with LG InstaView Door-in-Door Smart Refrigerator. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_5",
+        "name": "Home & Kitchen",
+        "slug": "home-kitchen",
+        "description": "Modern cookware, home appliances, decor, and smart home essentials.",
+        "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_19",
+        "name": "LG Electronics",
+        "slug": "lg",
+        "description": "Life's Good. Cutting-edge display technology and home appliances.",
+        "logo": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300",
+        "website": "https://www.lg.com"
+      }
+    },
+    {
+      "id": "id_57",
+      "name": "L'Oreal Revitalift 1.5% Pure Hyaluronic Acid Serum",
+      "slug": "loreal-revitalift-hyaluronic-acid",
+      "sku": "LOR-REV-HA",
+      "description": "Dermatologist-validated intensive hydrating serum that visibly replumps skin and reduces wrinkles in 1 week.",
+      "shortDescription": "Anti-aging daily serum for all skin types.",
+      "price": 29.99,
+      "compareAtPrice": 34.99,
+      "costPrice": 12,
+      "stock": 150,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_6",
+      "brandId": "id_25",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+          "altText": "L'Oreal Revitalift 1.5% Pure Hyaluronic Acid Serum",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with L'Oreal Revitalift 1.5% Pure Hyaluronic Acid Serum. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_6",
+        "name": "Beauty & Personal Care",
+        "slug": "beauty-personal-care",
+        "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_25",
+        "name": "L'Oreal",
+        "slug": "loreal",
+        "description": "Because You're Worth It. Global leader in beauty and cosmetics.",
+        "logo": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300",
+        "website": "https://www.loreal.com"
+      }
+    },
+    {
+      "id": "id_58",
+      "name": "L'Oreal Infallible 24H Fresh Wear Foundation",
+      "slug": "loreal-infallible-foundation",
+      "sku": "LOR-INF-FND",
+      "description": "Breathable, sweat-resistant, transfer-resistant foundation providing medium-to-full buildable coverage.",
+      "shortDescription": "Long-lasting liquid makeup foundation.",
+      "price": 15.99,
+      "compareAtPrice": 18.99,
+      "costPrice": 6.5,
+      "stock": 120,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_6",
+      "brandId": "id_25",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+          "altText": "L'Oreal Infallible 24H Fresh Wear Foundation",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with L'Oreal Infallible 24H Fresh Wear Foundation. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_6",
+        "name": "Beauty & Personal Care",
+        "slug": "beauty-personal-care",
+        "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_25",
+        "name": "L'Oreal",
+        "slug": "loreal",
+        "description": "Because You're Worth It. Global leader in beauty and cosmetics.",
+        "logo": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300",
+        "website": "https://www.loreal.com"
+      }
+    },
+    {
+      "id": "id_59",
+      "name": "Dyson Supersonic Nural Hair Dryer",
+      "slug": "dyson-supersonic-nural",
+      "sku": "DYS-SUP-NUR",
+      "description": "Network of Nural sensors automatically adjusts airflow and heat to enhance natural shine and protect scalp health.",
+      "shortDescription": "Intelligent high-velocity ionic hair dryer.",
+      "price": 499.99,
+      "compareAtPrice": 549.99,
+      "costPrice": 350,
+      "stock": 25,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_6",
+      "brandId": "id_23",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800",
+          "altText": "Dyson Supersonic Nural Hair Dryer",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dyson Supersonic Nural Hair Dryer. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_6",
+        "name": "Beauty & Personal Care",
+        "slug": "beauty-personal-care",
+        "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_23",
+        "name": "Dyson",
+        "slug": "dyson",
+        "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+        "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+        "website": "https://www.dyson.com"
+      }
+    },
+    {
+      "id": "id_60",
+      "name": "Philips Sonicare DiamondClean 9000 Electric Toothbrush",
+      "slug": "philips-diamondclean-9000",
+      "sku": "PHI-DC-9000",
+      "description": "Removes up to 10x more plaque than manual toothbrush, built-in pressure sensor, connected app brushing report.",
+      "shortDescription": "Smart sonic toothbrush with wireless charging glass.",
+      "price": 219.95,
+      "compareAtPrice": 249.95,
+      "costPrice": 135,
+      "stock": 40,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_6",
+      "brandId": "id_22",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1559671089-8d5f47ca5d76?w=800",
+          "altText": "Philips Sonicare DiamondClean 9000 Electric Toothbrush",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Philips Sonicare DiamondClean 9000 Electric Toothbrush. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_6",
+        "name": "Beauty & Personal Care",
+        "slug": "beauty-personal-care",
+        "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_22",
+        "name": "Philips",
+        "slug": "philips",
+        "description": "Innovation and You. Health, personal care, and domestic appliances.",
+        "logo": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=300",
+        "website": "https://www.philips.com"
+      }
+    },
+    {
+      "id": "id_61",
+      "name": "Canon EOS R5 Mirrorless Full-Frame Camera",
+      "slug": "canon-eos-r5",
+      "sku": "CAN-EOS-R5",
+      "description": "45MP CMOS sensor, 8K RAW video recording, up to 8 stops of image stabilization, Dual Pixel CMOS AF II.",
+      "shortDescription": "Flagship professional 8K mirrorless camera body.",
+      "price": 3399,
+      "compareAtPrice": 3899,
+      "costPrice": 2700,
+      "stock": 12,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_26",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "altText": "Canon EOS R5 Mirrorless Full-Frame Camera",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Canon EOS R5 Mirrorless Full-Frame Camera. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_26",
+        "name": "Canon",
+        "slug": "canon",
+        "description": "Delighting You Always. Cameras, lenses, and imaging excellence.",
+        "logo": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300",
+        "website": "https://www.canon.com"
+      }
+    },
+    {
+      "id": "id_62",
+      "name": "Canon RF 24-70mm f/2.8L IS USM Lens",
+      "slug": "canon-rf-24-70-f28l",
+      "sku": "CAN-RF2470-L",
+      "description": "Professional standard zoom lens with f/2.8 aperture, 5-stop optical stabilization, Nano USM autofocus.",
+      "shortDescription": "Premium L-series zoom lens for EOS R system.",
+      "price": 2399,
+      "compareAtPrice": 2599,
+      "costPrice": 1900,
+      "stock": 15,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_26",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=800",
+          "altText": "Canon RF 24-70mm f/2.8L IS USM Lens",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Canon RF 24-70mm f/2.8L IS USM Lens. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_26",
+        "name": "Canon",
+        "slug": "canon",
+        "description": "Delighting You Always. Cameras, lenses, and imaging excellence.",
+        "logo": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300",
+        "website": "https://www.canon.com"
+      }
+    },
+    {
+      "id": "id_63",
+      "name": "ProForm Carbon CX Smart Indoor Studio Bike",
+      "slug": "proform-carbon-cx-studio-bike",
+      "sku": "SPT-BIKE-CX",
+      "description": "Adjustable magnetic resistance, interchangeable pedals, dumbbells included, compatible with fitness apps.",
+      "shortDescription": "Stationary cycling bike for home gym cardio workouts.",
+      "price": 499,
+      "compareAtPrice": 599,
+      "costPrice": 320,
+      "stock": 18,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_7",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+          "altText": "ProForm Carbon CX Smart Indoor Studio Bike",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with ProForm Carbon CX Smart Indoor Studio Bike. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_7",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors",
+        "description": "High-performance athletic gear, fitness machines, and outdoor camping.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_64",
+      "name": "North Peak 4-Person Waterproof Camping Tent",
+      "slug": "north-peak-4p-camping-tent",
+      "sku": "SPT-TENT-4P",
+      "description": "Weatherproof ripstop polyester with tub floor, color-coded aluminum poles, and easy 10-minute setup.",
+      "shortDescription": "Lightweight 3-season waterproof family tent.",
+      "price": 189.99,
+      "compareAtPrice": 229.99,
+      "costPrice": 105,
+      "stock": 30,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_7",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800",
+          "altText": "North Peak 4-Person Waterproof Camping Tent",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with North Peak 4-Person Waterproof Camping Tent. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_7",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors",
+        "description": "High-performance athletic gear, fitness machines, and outdoor camping.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_65",
+      "name": "Hydro Flask 32 oz Wide Mouth Insulated Bottle",
+      "slug": "hydro-flask-32oz-wide-mouth",
+      "sku": "SPT-HF-32OZ",
+      "description": "TempShield double-wall vacuum insulation keeps drinks cold up to 24 hours and piping hot for 12 hours.",
+      "shortDescription": "Stainless steel reusable insulated water bottle.",
+      "price": 44.95,
+      "compareAtPrice": 49.95,
+      "costPrice": 20,
+      "stock": 110,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_7",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800",
+          "altText": "Hydro Flask 32 oz Wide Mouth Insulated Bottle",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Hydro Flask 32 oz Wide Mouth Insulated Bottle. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_7",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors",
+        "description": "High-performance athletic gear, fitness machines, and outdoor camping.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_66",
+      "name": "Garmin Forerunner 265 GPS Running Smartwatch",
+      "slug": "garmin-forerunner-265",
+      "sku": "SPT-GAR-265",
+      "description": "Brilliant AMOLED touchscreen display, training readiness metric, wrist-based running dynamics, 13-day battery.",
+      "shortDescription": "Dedicated running watch with recovery tracking.",
+      "price": 449.99,
+      "compareAtPrice": 499.99,
+      "costPrice": 320,
+      "stock": 22,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_7",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800",
+          "altText": "Garmin Forerunner 265 GPS Running Smartwatch",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Garmin Forerunner 265 GPS Running Smartwatch. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_7",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors",
+        "description": "High-performance athletic gear, fitness machines, and outdoor camping.",
+        "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_67",
+      "name": "Atomic Habits by James Clear (Hardcover)",
+      "slug": "atomic-habits-james-clear",
+      "sku": "BOK-ATM-HAB",
+      "description": "The proven guide to break bad behaviors and adopt good ones with tiny changes that deliver remarkable results.",
+      "shortDescription": "Global #1 bestseller on personal transformation.",
+      "price": 19.99,
+      "compareAtPrice": 27,
+      "costPrice": 9,
+      "stock": 140,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_8",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800",
+          "altText": "Atomic Habits by James Clear (Hardcover)",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Atomic Habits by James Clear (Hardcover). Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_8",
+        "name": "Books & Stationery",
+        "slug": "books-stationery",
+        "description": "Bestselling books, journals, pens, and fine office stationery.",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_68",
+      "name": "Moleskine Classic Leather Notebook Large Ruled",
+      "slug": "moleskine-classic-notebook",
+      "sku": "STA-MOL-LG",
+      "description": "Hardcover journal with rounded corners, acid-free ivory pages, ribbon bookmark, and elastic closure band.",
+      "shortDescription": "Iconic Italian hardback notebook for journaling.",
+      "price": 24.5,
+      "compareAtPrice": 28,
+      "costPrice": 11,
+      "stock": 95,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_8",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800",
+          "altText": "Moleskine Classic Leather Notebook Large Ruled",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Moleskine Classic Leather Notebook Large Ruled. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_8",
+        "name": "Books & Stationery",
+        "slug": "books-stationery",
+        "description": "Bestselling books, journals, pens, and fine office stationery.",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_69",
+      "name": "Lamy 2000 Makrolon Fountain Pen (Fine Nib)",
+      "slug": "lamy-2000-fountain-pen",
+      "sku": "STA-LAMY-2000",
+      "description": "Bauhaus design classic in fiberglass reinforced Makrolon with platinum-coated 14-karat gold piston nib.",
+      "shortDescription": "Legendary minimalist piston-fill fountain pen.",
+      "price": 219,
+      "compareAtPrice": 249,
+      "costPrice": 140,
+      "stock": 30,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_8",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=800",
+          "altText": "Lamy 2000 Makrolon Fountain Pen (Fine Nib)",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Lamy 2000 Makrolon Fountain Pen (Fine Nib). Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_8",
+        "name": "Books & Stationery",
+        "slug": "books-stationery",
+        "description": "Bestselling books, journals, pens, and fine office stationery.",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_70",
+      "name": "LEGO Icons Concorde Model Aircraft 10318",
+      "slug": "lego-icons-concorde-10318",
+      "sku": "TOY-LEGO-CONC",
+      "description": "2,083-piece collector model with droop nose, functioning landing gear, delta wings, and display stand.",
+      "shortDescription": "Detailed replica of the supersonic commercial airliner.",
+      "price": 199.99,
+      "compareAtPrice": 229.99,
+      "costPrice": 130,
+      "stock": 25,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_9",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=800",
+          "altText": "LEGO Icons Concorde Model Aircraft 10318",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with LEGO Icons Concorde Model Aircraft 10318. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_9",
+        "name": "Toys & Baby",
+        "slug": "toys-baby",
+        "description": "Educational toys, nursery furniture, and child care essentials.",
+        "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_71",
+      "name": "Babyzen YOYO2 Lightweight Travel Stroller",
+      "slug": "babyzen-yoyo2-stroller",
+      "sku": "BBY-YZ-YOYO2",
+      "description": "Ultra-compact folding stroller that fits in aircraft cabin overhead bins with all-wheel elastomer suspension.",
+      "shortDescription": "Cabin-approved luxury folding stroller.",
+      "price": 449,
+      "compareAtPrice": 499,
+      "costPrice": 310,
+      "stock": 20,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_9",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800",
+          "altText": "Babyzen YOYO2 Lightweight Travel Stroller",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Babyzen YOYO2 Lightweight Travel Stroller. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_9",
+        "name": "Toys & Baby",
+        "slug": "toys-baby",
+        "description": "Educational toys, nursery furniture, and child care essentials.",
+        "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_72",
+      "name": "DeWalt 20V MAX XR Cordless Drill Combo Kit",
+      "slug": "dewalt-20v-max-xr-drill-kit",
+      "sku": "AUT-DEW-20V",
+      "description": "Brushless hammer drill and impact driver with two 4Ah batteries, charger, and contractor storage bag.",
+      "shortDescription": "Professional grade 2-tool brushless combo kit.",
+      "price": 299,
+      "compareAtPrice": 349,
+      "costPrice": 195,
+      "stock": 35,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_10",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800",
+          "altText": "DeWalt 20V MAX XR Cordless Drill Combo Kit",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with DeWalt 20V MAX XR Cordless Drill Combo Kit. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_10",
+        "name": "Automotive & Tools",
+        "slug": "automotive-tools",
+        "description": "Vehicle maintenance, car electronics, and precision power tools.",
+        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_73",
+      "name": "NOCO Boost Plus GB40 1000A UltraSafe Jump Starter",
+      "slug": "noco-boost-plus-gb40",
+      "sku": "AUT-NOCO-GB40",
+      "description": "Compact lithium battery jump starter pack for gasoline engines up to 6.0L and diesel up to 3.0L with spark-proof tech.",
+      "shortDescription": "Portable 12-volt car battery jump pack.",
+      "price": 99.95,
+      "compareAtPrice": 125.95,
+      "costPrice": 58,
+      "stock": 60,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_10",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800",
+          "altText": "NOCO Boost Plus GB40 1000A UltraSafe Jump Starter",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with NOCO Boost Plus GB40 1000A UltraSafe Jump Starter. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_10",
+        "name": "Automotive & Tools",
+        "slug": "automotive-tools",
+        "description": "Vehicle maintenance, car electronics, and precision power tools.",
+        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_74",
+      "name": "Theragun PRO Plus Deep Tissue Percussive Massager",
+      "slug": "theragun-pro-plus-massager",
+      "sku": "HLT-THR-PRO",
+      "description": "QuietForce motor delivers 16mm amplitude percussive therapy, LED red light therapy, and biometric breathwork sensor.",
+      "shortDescription": "Professional muscle recovery handheld device.",
+      "price": 599,
+      "compareAtPrice": 649,
+      "costPrice": 390,
+      "stock": 18,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_11",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800",
+          "altText": "Theragun PRO Plus Deep Tissue Percussive Massager",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Theragun PRO Plus Deep Tissue Percussive Massager. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_11",
+        "name": "Health & Wellness",
+        "slug": "health-wellness",
+        "description": "Supplements, health monitors, ergonomic gear, and wellness products.",
+        "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_75",
+      "name": "Withings Body Scan Smart Connected Scale",
+      "slug": "withings-body-scan-scale",
+      "sku": "HLT-WIT-BSCAN",
+      "description": "Segmental body composition analysis, 6-lead ECG cardiovascular health assessment, and nerve activity monitoring.",
+      "shortDescription": "Medical-grade smart health station with handle.",
+      "price": 399.95,
+      "compareAtPrice": 449.95,
+      "costPrice": 260,
+      "stock": 25,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_11",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800",
+          "altText": "Withings Body Scan Smart Connected Scale",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Withings Body Scan Smart Connected Scale. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_11",
+        "name": "Health & Wellness",
+        "slug": "health-wellness",
+        "description": "Supplements, health monitors, ergonomic gear, and wellness products.",
+        "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_76",
+      "name": "Illy Classico Whole Bean Italian Espresso Roast 2.2 lb",
+      "slug": "illy-classico-whole-bean-espresso",
+      "sku": "GRM-ILLY-WBN",
+      "description": "100% Arabica blend from nine distinct growing regions worldwide with lingering notes of caramel and orange blossom.",
+      "shortDescription": "Signature medium roast Italian whole bean coffee.",
+      "price": 34.99,
+      "compareAtPrice": 39.99,
+      "costPrice": 18,
+      "stock": 85,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_12",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800",
+          "altText": "Illy Classico Whole Bean Italian Espresso Roast 2.2 lb",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Illy Classico Whole Bean Italian Espresso Roast 2.2 lb. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_12",
+        "name": "Gourmet & Grocery",
+        "slug": "gourmet-grocery",
+        "description": "Artisan coffee, snacks, organic condiments, and specialty foods.",
+        "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_77",
+      "name": "Acetaia Giusti 5 Gold Medals Balsamic Vinegar of Modena 250ml",
+      "slug": "giusti-balsamic-vinegar-modena",
+      "sku": "GRM-GIUSTI-5G",
+      "description": "Aged in antique wooden barrels dating back centuries, with intense aromas of dark plums and sweet black cherries.",
+      "shortDescription": "Aged luxury Modena balsamic reduction.",
+      "price": 79,
+      "compareAtPrice": 89,
+      "costPrice": 42,
+      "stock": 40,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_12",
+      "brandId": null,
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=800",
+          "altText": "Acetaia Giusti 5 Gold Medals Balsamic Vinegar of Modena 250ml",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Acetaia Giusti 5 Gold Medals Balsamic Vinegar of Modena 250ml. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_12",
+        "name": "Gourmet & Grocery",
+        "slug": "gourmet-grocery",
+        "description": "Artisan coffee, snacks, organic condiments, and specialty foods.",
+        "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800",
+        "isFeatured": false
+      },
+      "brand": null
+    },
+    {
+      "id": "id_78",
+      "name": "Apple iPad Pro 13\" M4 OLED 256GB",
+      "slug": "apple-ipad-pro-13-m4",
+      "sku": "APL-IPAD-M4-13",
+      "description": "Ultra Retina XDR tandem OLED display, M4 neural engine, incredibly thin 5.1mm aerospace aluminum enclosure.",
+      "shortDescription": "Next-gen M4 iPad Pro with tandem OLED screen.",
+      "price": 1299,
+      "compareAtPrice": 1399,
+      "costPrice": 1020,
+      "stock": 30,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "altText": "Apple iPad Pro 13\" M4 OLED 256GB",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple iPad Pro 13\" M4 OLED 256GB. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_79",
+      "name": "Samsung Galaxy Watch Ultra 47mm LTE",
+      "slug": "samsung-galaxy-watch-ultra",
+      "sku": "SAM-GW-ULTRA",
+      "description": "Cushion design titanium casing, dual GPS tracking, 100m water resistance, and BioActive sensor for sleep apnea analysis.",
+      "shortDescription": "Rugged titanium Android smartwatch with LTE.",
+      "price": 649.99,
+      "compareAtPrice": 699.99,
+      "costPrice": 480,
+      "stock": 28,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_14",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+          "altText": "Samsung Galaxy Watch Ultra 47mm LTE",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Samsung Galaxy Watch Ultra 47mm LTE. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_14",
+        "name": "Samsung",
+        "slug": "samsung",
+        "description": "Inspire the World, Create the Future with groundbreaking technology.",
+        "logo": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300",
+        "website": "https://www.samsung.com"
+      }
+    },
+    {
+      "id": "id_80",
+      "name": "Sony FE 50mm f/1.2 GM Prime Lens",
+      "slug": "sony-fe-50mm-f12-gm",
+      "sku": "SNY-FE50-GM",
+      "description": "Ultra-fast f/1.2 maximum aperture, three XA extreme aspherical elements, and four XD linear motors for silent tracking.",
+      "shortDescription": "G Master standard prime lens for Sony Alpha bodies.",
+      "price": 1999,
+      "compareAtPrice": 2199,
+      "costPrice": 1550,
+      "stock": 10,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_15",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=800",
+          "altText": "Sony FE 50mm f/1.2 GM Prime Lens",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Sony FE 50mm f/1.2 GM Prime Lens. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_15",
+        "name": "Sony",
+        "slug": "sony",
+        "description": "Be Moved. World leader in audio, visual, and gaming entertainment.",
+        "logo": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300",
+        "website": "https://www.sony.com"
+      }
+    },
+    {
+      "id": "id_81",
+      "name": "Nike Vaporfly 3 Racing Shoes",
+      "slug": "nike-vaporfly-3",
+      "sku": "NKE-VPF-3",
+      "description": "Full-length carbon fiber Flyplate provides a stiff and propulsive feel combined with ultra-responsive ZoomX foam.",
+      "shortDescription": "Championship carbon-plated marathon road racing shoe.",
+      "price": 260,
+      "compareAtPrice": 280,
+      "costPrice": 140,
+      "stock": 35,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_16",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+          "altText": "Nike Vaporfly 3 Racing Shoes",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Nike Vaporfly 3 Racing Shoes. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_16",
+        "name": "Nike",
+        "slug": "nike",
+        "description": "Just Do It. World premier athletic footwear and apparel.",
+        "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        "website": "https://www.nike.com"
+      }
+    },
+    {
+      "id": "id_82",
+      "name": "Adidas Terrex Free Hiker 2 GORE-TEX",
+      "slug": "adidas-terrex-free-hiker-2",
+      "sku": "ADI-TRX-GTX",
+      "description": "Waterproof breathable GORE-TEX membrane, Continental Rubber outsole for unmatched traction on wet mud and rock.",
+      "shortDescription": "Cushioned waterproof trail hiking boots.",
+      "price": 230,
+      "compareAtPrice": 250,
+      "costPrice": 115,
+      "stock": 45,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_17",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800",
+          "altText": "Adidas Terrex Free Hiker 2 GORE-TEX",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Adidas Terrex Free Hiker 2 GORE-TEX. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_17",
+        "name": "Adidas",
+        "slug": "adidas",
+        "description": "Impossible Is Nothing. Iconic sportswear and footwear brand.",
+        "logo": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=300",
+        "website": "https://www.adidas.com"
+      }
+    },
+    {
+      "id": "id_83",
+      "name": "Dyson Airwrap Multi-Styler Complete Long",
+      "slug": "dyson-airwrap-complete-long",
+      "sku": "DYS-AW-LONG",
+      "description": "Styles hair using aerodynamic Coanda effect without extreme heat damage for bouncy curls, waves, or smooth blowout.",
+      "shortDescription": "Versatile air multi-styler and drying tool.",
+      "price": 599.99,
+      "compareAtPrice": 649.99,
+      "costPrice": 420,
+      "stock": 30,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_6",
+      "brandId": "id_23",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+          "altText": "Dyson Airwrap Multi-Styler Complete Long",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dyson Airwrap Multi-Styler Complete Long. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_6",
+        "name": "Beauty & Personal Care",
+        "slug": "beauty-personal-care",
+        "description": "Premium skincare, makeup, grooming, and luxury perfumes.",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_23",
+        "name": "Dyson",
+        "slug": "dyson",
+        "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+        "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+        "website": "https://www.dyson.com"
+      }
+    },
+    {
+      "id": "id_84",
+      "name": "Bose SoundLink Max Portable Bluetooth Speaker",
+      "slug": "bose-soundlink-max",
+      "sku": "BOS-SL-MAX",
+      "description": "Deep stereo bass with up to 20 hours of playtime, IP67 waterproof and dustproof silicone enclosure with removable rope handle.",
+      "shortDescription": "Rugged high-output outdoor boombox speaker.",
+      "price": 399,
+      "compareAtPrice": 449,
+      "costPrice": 275,
+      "stock": 40,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_21",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800",
+          "altText": "Bose SoundLink Max Portable Bluetooth Speaker",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Bose SoundLink Max Portable Bluetooth Speaker. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_21",
+        "name": "Bose",
+        "slug": "bose",
+        "description": "Better Sound Through Research. Noise cancelling headphones and speakers.",
+        "logo": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300",
+        "website": "https://www.bose.com"
+      }
+    },
+    {
+      "id": "id_85",
+      "name": "Dell UltraSharp 32\" 4K QD-OLED Monitor",
+      "slug": "dell-ultrasharp-32-4k-oled",
+      "sku": "DEL-U32-QDOLED",
+      "description": "144Hz refresh rate, 99% DCI-P3 color gamut, USB-C 90W power delivery hub, DisplayHDR True Black 400 certified.",
+      "shortDescription": "Color-critical 4K quantum dot OLED computer display.",
+      "price": 1199.99,
+      "compareAtPrice": 1399.99,
+      "costPrice": 900,
+      "stock": 15,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_20",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+          "altText": "Dell UltraSharp 32\" 4K QD-OLED Monitor",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dell UltraSharp 32\" 4K QD-OLED Monitor. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_20",
+        "name": "Dell",
+        "slug": "dell",
+        "description": "Transforming computing and productivity across laptops and monitors.",
+        "logo": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=300",
+        "website": "https://www.dell.com"
+      }
+    },
+    {
+      "id": "id_86",
+      "name": "Rolex Cosmograph Daytona 40mm White Gold",
+      "slug": "rolex-cosmograph-daytona-wg",
+      "sku": "ROL-DAY-116519",
+      "description": "Monobloc Cerachrom bezel in black ceramic with tachymetric scale, Oysterflex elastomeric bracelet, calibre 4131 movement.",
+      "shortDescription": "Legendary white gold racing chronograph watch.",
+      "price": 32500,
+      "compareAtPrice": 35000,
+      "costPrice": 26000,
+      "stock": 2,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_27",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+          "altText": "Rolex Cosmograph Daytona 40mm White Gold",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Rolex Cosmograph Daytona 40mm White Gold. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_27",
+        "name": "Rolex",
+        "slug": "rolex",
+        "description": "A Crown for Every Achievement. Renowned luxury Swiss chronometers.",
+        "logo": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=300",
+        "website": "https://www.rolex.com"
+      }
+    },
+    {
+      "id": "id_87",
+      "name": "Sony Alpha 7 IV Full-Frame Hybrid Camera",
+      "slug": "sony-alpha-7-iv",
+      "sku": "SNY-A7M4-BDY",
+      "description": "33MP Exmor R CMOS sensor, 4K 60p 10-bit recording, real-time Eye AF for humans, animals, and birds.",
+      "shortDescription": "All-around hybrid full-frame photo and video camera.",
+      "price": 2498,
+      "compareAtPrice": 2698,
+      "costPrice": 1950,
+      "stock": 16,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_15",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "altText": "Sony Alpha 7 IV Full-Frame Hybrid Camera",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Sony Alpha 7 IV Full-Frame Hybrid Camera. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_15",
+        "name": "Sony",
+        "slug": "sony",
+        "description": "Be Moved. World leader in audio, visual, and gaming entertainment.",
+        "logo": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300",
+        "website": "https://www.sony.com"
+      }
+    },
+    {
+      "id": "id_88",
+      "name": "Apple MacBook Air 15\" M3 Midnight 16GB",
+      "slug": "macbook-air-15-m3",
+      "sku": "APL-MBA15-M3",
+      "description": "Strikingly thin design with expansive 15.3-inch Liquid Retina display, MagSafe 3 charging, and 18-hour battery.",
+      "shortDescription": "Lightweight big screen everyday laptop.",
+      "price": 1499,
+      "compareAtPrice": 1699,
+      "costPrice": 1200,
+      "stock": 32,
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_13",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "altText": "Apple MacBook Air 15\" M3 Midnight 16GB",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Apple MacBook Air 15\" M3 Midnight 16GB. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_13",
+        "name": "Apple",
+        "slug": "apple",
+        "description": "Think Different. Premium consumer electronics and computing.",
+        "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+        "website": "https://www.apple.com"
+      }
+    },
+    {
+      "id": "id_89",
+      "name": "Samsung Galaxy Tab S9 Ultra 512GB",
+      "slug": "samsung-galaxy-tab-s9-ultra",
+      "sku": "SAM-TAB-S9U",
+      "description": "Enormous 14.6\" Dynamic AMOLED 2X display, IP68 water resistance, Snapdragon 8 Gen 2 processor, and S Pen included.",
+      "shortDescription": "Gigantic flagship Android tablet for artists and multitasking.",
+      "price": 1199.99,
+      "compareAtPrice": 1319.99,
+      "costPrice": 920,
+      "stock": 20,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_14",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "altText": "Samsung Galaxy Tab S9 Ultra 512GB",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Samsung Galaxy Tab S9 Ultra 512GB. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_14",
+        "name": "Samsung",
+        "slug": "samsung",
+        "description": "Inspire the World, Create the Future with groundbreaking technology.",
+        "logo": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300",
+        "website": "https://www.samsung.com"
+      }
+    },
+    {
+      "id": "id_90",
+      "name": "Nike Sportswear Club Fleece Pullover Hoodie",
+      "slug": "nike-club-fleece-hoodie",
+      "sku": "NKE-CLUB-HD",
+      "description": "Brushed-back fleece is soft and smooth against the skin with ribbed hem and cuffs and adjustable drawstring hood.",
+      "shortDescription": "Everyday casual comfort fleece hoodie.",
+      "price": 65,
+      "compareAtPrice": 75,
+      "costPrice": 30,
+      "stock": 140,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_16",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
+          "altText": "Nike Sportswear Club Fleece Pullover Hoodie",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Nike Sportswear Club Fleece Pullover Hoodie. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_16",
+        "name": "Nike",
+        "slug": "nike",
+        "description": "Just Do It. World premier athletic footwear and apparel.",
+        "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        "website": "https://www.nike.com"
+      }
+    },
+    {
+      "id": "id_91",
+      "name": "Adidas Tiro 23 League Training Pants",
+      "slug": "adidas-tiro-23-pants",
+      "sku": "ADI-TIRO-23",
+      "description": "AEROREADY moisture-absorbing fabric with tapered leg fit, ankle zips for easy on-off over cleats, and zip pockets.",
+      "shortDescription": "Tapered athletic soccer training track pants.",
+      "price": 55,
+      "compareAtPrice": 65,
+      "costPrice": 24,
+      "stock": 110,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_4",
+      "brandId": "id_17",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=800",
+          "altText": "Adidas Tiro 23 League Training Pants",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Adidas Tiro 23 League Training Pants. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_4",
+        "name": "Fashion & Apparel",
+        "slug": "fashion-apparel",
+        "description": "Trendy clothing, shoes, and luxury accessories for all seasons.",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_17",
+        "name": "Adidas",
+        "slug": "adidas",
+        "description": "Impossible Is Nothing. Iconic sportswear and footwear brand.",
+        "logo": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=300",
+        "website": "https://www.adidas.com"
+      }
+    },
+    {
+      "id": "id_92",
+      "name": "Dyson Zone Absolute+ Noise Cancelling Headphones",
+      "slug": "dyson-zone-absolute-plus",
+      "sku": "DYS-ZONE-ABS",
+      "description": "Advanced active noise cancellation up to 38dB, full audio spectrum reproduction with non-contact electrostatic visor.",
+      "shortDescription": "High fidelity audio headphones with air purification visor.",
+      "price": 799,
+      "compareAtPrice": 949,
+      "costPrice": 550,
+      "stock": 14,
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 1,
+      "categoryId": "id_3",
+      "brandId": "id_23",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+          "altText": "Dyson Zone Absolute+ Noise Cancelling Headphones",
+          "isPrimary": true,
+          "sortOrder": 0
+        }
+      ],
+      "reviews": {
+        "create": {
+          "userId": "id_2",
+          "rating": 5,
+          "title": "Outstanding quality!",
+          "comment": "Really delighted with Dyson Zone Absolute+ Noise Cancelling Headphones. Works as advertised and delivered quickly.",
+          "isVerifiedPurchase": true
+        }
+      },
+      "isActive": true,
+      "category": {
+        "id": "id_3",
+        "name": "Electronics",
+        "slug": "electronics",
+        "description": "Smartphones, computers, audio, wearable tech and accessories.",
+        "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+        "isFeatured": true
+      },
+      "brand": {
+        "id": "id_23",
+        "name": "Dyson",
+        "slug": "dyson",
+        "description": "Engineering excellence in air purifiers, vacuums, and hair care.",
+        "logo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300",
+        "website": "https://www.dyson.com"
+      }
+    }
+  ],
+  "productImages": [],
+  "productVariants": [],
+  "reviews": [],
+  "orders": [],
+  "carts": [
+    {
+      "id": "cart_1794453905066_1000",
+      "items": [
+        {
+          "id": "ci_1794453905067_1001",
+          "createdAt": "2026-11-12T03:25:05.067Z",
+          "cartId": "cart_1794453905066_1000",
+          "productId": "id_33",
+          "variantId": null,
+          "quantity": 1,
+          "price": 1199,
+          "product": {
+            "id": "id_33",
+            "name": "Apple iPhone 16 Pro Max 256GB",
+            "slug": "iphone-16-pro-max-256gb",
+            "sku": "APL-IP16PM-256",
+            "description": "Titanium design with A18 Pro chip, 48MP Fusion camera system, and industry-leading battery life.",
+            "shortDescription": "Flagship smartphone with titanium design and A18 Pro chip.",
+            "price": 1199,
+            "compareAtPrice": 1299,
+            "costPrice": 950,
+            "stock": 45,
+            "isFeatured": true,
+            "rating": 4.8,
+            "reviewCount": 1,
+            "categoryId": "id_3",
+            "brandId": "id_13",
+            "images": [
+              {
+                "url": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+                "altText": "Apple iPhone 16 Pro Max 256GB",
+                "isPrimary": true,
+                "sortOrder": 0
+              }
+            ],
+            "reviews": {
+              "create": {
+                "userId": "id_2",
+                "rating": 5,
+                "title": "Outstanding quality!",
+                "comment": "Really delighted with Apple iPhone 16 Pro Max 256GB. Works as advertised and delivered quickly.",
+                "isVerifiedPurchase": true
+              }
+            },
+            "isActive": true,
+            "category": {
+              "id": "id_3",
+              "name": "Electronics",
+              "slug": "electronics",
+              "description": "Smartphones, computers, audio, wearable tech and accessories.",
+              "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800",
+              "isFeatured": true
+            },
+            "brand": {
+              "id": "id_13",
+              "name": "Apple",
+              "slug": "apple",
+              "description": "Think Different. Premium consumer electronics and computing.",
+              "logo": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300",
+              "website": "https://www.apple.com"
+            }
+          }
+        }
+      ],
+      "userId": "id_1"
+    },
+    {
+      "id": "cart_1794486104274_1000",
+      "items": [],
+      "userId": "id_2"
+    }
+  ],
+  "wishlists": [
+    {
+      "id": "wl_1794486105706_1001",
+      "items": [],
+      "userId": "id_2"
+    }
+  ]
+}

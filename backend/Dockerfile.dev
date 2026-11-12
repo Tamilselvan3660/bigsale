@@ -1,0 +1,32 @@
+# Multi-stage dev Dockerfile for BIGSALE Backend
+FROM node:24-alpine AS base
+
+WORKDIR /app
+
+# Install system dependencies needed for native modules and Prisma engines
+RUN apk add --no-cache libc6-compat openssl
+
+# Stage 1: Dependencies cache
+FROM base AS dependencies
+WORKDIR /app
+COPY package*.json ./
+COPY prisma ./prisma/
+RUN npm install
+RUN npx prisma generate
+
+# Stage 2: Development runtime
+FROM base AS development
+WORKDIR /app
+
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/prisma ./prisma
+COPY package*.json ./
+COPY tsconfig.json ./
+COPY src ./src
+
+ENV PORT=4000
+ENV NODE_ENV=development
+
+EXPOSE 4000
+
+CMD ["npm", "run", "dev"]
