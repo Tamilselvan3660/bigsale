@@ -2,9 +2,13 @@ import { Request, Response, NextFunction } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { z } from 'zod';
+import crypto from 'crypto';
+import { v4 as uuidv4 } from 'uuid';
 import prisma from '../lib/prisma';
 import { AuthenticatedRequest } from '../middleware/auth';
 import { AppError } from '../middleware/errorHandler';
+import { sendEmail } from '../config/mailer';
+import { welcomeTemplate } from '../config/emailTemplates';
 
 const registerSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -107,6 +111,26 @@ export const register = async (req: Request, res: Response, next: NextFunction):
         user,
         token,
       },
+    });
+
+    // Non-blocking: send welcome + verification email
+    setImmediate(async () => {
+      try {
+        const verificationToken = crypto.randomBytes(32).toString('hex');
+        const tokenHash = crypto.createHash('sha256').update(verificationToken).digest('hex');
+        const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+        await prisma.emailVerification.create({
+          data: { id: uuidv4(), userId: user.id, tokenHash, expiresAt, createdAt: new Date().toISOString() },
+        });
+        const verificationUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/verify-email?token=${verificationToken}`;
+        await sendEmail({
+          to: user.email,
+          subject: 'Welcome to BIGSALE — Please Verify Your Email',
+          html: welcomeTemplate(user.firstName || 'Customer', verificationUrl),
+        });
+      } catch (emailErr: any) {
+        console.warn('[Auth] Welcome email failed (non-fatal):', emailErr?.message || emailErr);
+      }
     });
   } catch (error) {
     next(error);

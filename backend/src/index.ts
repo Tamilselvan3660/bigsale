@@ -11,6 +11,7 @@ import rateLimit from 'express-rate-limit';
 import routes from './routes';
 import { errorHandler } from './middleware/errorHandler';
 import prisma from './lib/prisma';
+import { verifySmtpConnection } from './config/mailer';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -88,6 +89,7 @@ const server = app.listen(PORT, () => {
   console.log(`🚀 BIGSALE Backend Server running at http://localhost:${PORT}`);
   console.log(`📚 Health check available at http://localhost:${PORT}/api/health`);
   console.log(`⚡ Environment: ${process.env.NODE_ENV || 'development'}`);
+  verifySmtpConnection().catch(() => {});
 });
 
 // Graceful Shutdown

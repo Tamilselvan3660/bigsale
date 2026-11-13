@@ -13,6 +13,9 @@ interface StoreData {
   orders: any[];
   carts: any[];
   wishlists: any[];
+  emailVerifications: any[];
+  passwordResets: any[];
+  otpCodes: any[];
 }
 
 let store: StoreData = {
@@ -24,6 +27,9 @@ let store: StoreData = {
   orders: [],
   carts: [],
   wishlists: [],
+  emailVerifications: [],
+  passwordResets: [],
+  otpCodes: [],
 };
 
 if (fs.existsSync(dataFilePath)) {
@@ -33,6 +39,9 @@ if (fs.existsSync(dataFilePath)) {
     if (!store.orders) store.orders = [];
     if (!store.carts) store.carts = [];
     if (!store.wishlists) store.wishlists = [];
+    if (!store.emailVerifications) store.emailVerifications = [];
+    if (!store.passwordResets) store.passwordResets = [];
+    if (!store.otpCodes) store.otpCodes = [];
   } catch (e) {
     console.error('Failed to parse data.json', e);
   }
@@ -362,6 +371,75 @@ export const mockPrisma: any = {
       return fnOrArray(mockPrisma);
     }
     return Promise.all(fnOrArray);
+  },
+
+  emailVerification: {
+    create: async (args: any) => {
+      const rec = { ...args.data, createdAt: args.data.createdAt || new Date().toISOString() };
+      store.emailVerifications.push(rec);
+      saveStore();
+      return rec;
+    },
+    findUnique: async (args: any) => {
+      return store.emailVerifications.find((r: any) => matchesWhere(r, args.where)) || null;
+    },
+    update: async (args: any) => {
+      const idx = store.emailVerifications.findIndex((r: any) => matchesWhere(r, args.where));
+      if (idx === -1) throw new Error('EmailVerification not found');
+      store.emailVerifications[idx] = { ...store.emailVerifications[idx], ...args.data };
+      saveStore();
+      return store.emailVerifications[idx];
+    },
+    deleteMany: async (args: any) => {
+      const before = store.emailVerifications.length;
+      store.emailVerifications = store.emailVerifications.filter((r: any) => !matchesWhere(r, args.where));
+      saveStore();
+      return { count: before - store.emailVerifications.length };
+    },
+  },
+
+  passwordReset: {
+    create: async (args: any) => {
+      const rec = { ...args.data, createdAt: args.data.createdAt || new Date().toISOString() };
+      store.passwordResets.push(rec);
+      saveStore();
+      return rec;
+    },
+    findUnique: async (args: any) => {
+      return store.passwordResets.find((r: any) => matchesWhere(r, args.where)) || null;
+    },
+    update: async (args: any) => {
+      const idx = store.passwordResets.findIndex((r: any) => matchesWhere(r, args.where));
+      if (idx === -1) throw new Error('PasswordReset not found');
+      store.passwordResets[idx] = { ...store.passwordResets[idx], ...args.data };
+      saveStore();
+      return store.passwordResets[idx];
+    },
+  },
+
+  otpCode: {
+    create: async (args: any) => {
+      const rec = { ...args.data, createdAt: args.data.createdAt || new Date().toISOString() };
+      store.otpCodes.push(rec);
+      saveStore();
+      return rec;
+    },
+    findFirst: async (args: any) => {
+      return store.otpCodes.find((r: any) => matchesWhere(r, args.where)) || null;
+    },
+    update: async (args: any) => {
+      const idx = store.otpCodes.findIndex((r: any) => matchesWhere(r, args.where));
+      if (idx === -1) throw new Error('OtpCode not found');
+      store.otpCodes[idx] = { ...store.otpCodes[idx], ...args.data };
+      saveStore();
+      return store.otpCodes[idx];
+    },
+    deleteMany: async (args: any) => {
+      const before = store.otpCodes.length;
+      store.otpCodes = store.otpCodes.filter((r: any) => !matchesWhere(r, args.where));
+      saveStore();
+      return { count: before - store.otpCodes.length };
+    },
   },
 };
 

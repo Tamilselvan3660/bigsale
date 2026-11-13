@@ -58,6 +58,30 @@
           }
         ]
       }
+    },
+    {
+      "id": "usr_1794579527092_1000",
+      "email": "selvantamil84786@gmail.com",
+      "password": "$2b$10$PW5ARPeCm9h.lvhDPDI1ke7vGHNz78PbO7PBxHhoBUua1RA5H2Gqq",
+      "firstName": "tamil",
+      "lastName": "s",
+      "role": "CUSTOMER",
+      "cart": {
+        "create": {}
+      },
+      "wishlist": {
+        "create": {}
+      },
+      "auditLogs": {
+        "create": {
+          "action": "USER_REGISTERED",
+          "entity": "User",
+          "details": {
+            "email": "selvantamil84786@gmail.com"
+          },
+          "ipAddress": "::1"
+        }
+      }
     }
   ],
   "categories": [

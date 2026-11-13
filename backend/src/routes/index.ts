@@ -15,6 +15,7 @@ import personalizationRoutes from './personalization.routes';
 import retentionRoutes from './retention.routes';
 import enterpriseRoutes from './enterprise.routes';
 import expansionRoutes from './expansion.routes';
+import emailRoutes from './email.routes';
 
 const router = Router();
 
@@ -45,5 +46,6 @@ router.use('/', personalizationRoutes);
 router.use('/', retentionRoutes);
 router.use('/', enterpriseRoutes);
 router.use('/', expansionRoutes);
+router.use('/email', emailRoutes);
 
 export default router;
