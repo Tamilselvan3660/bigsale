@@ -9,6 +9,19 @@ import {
   X,
   LogOut,
   Package,
+  ChevronDown,
+  Sparkles,
+  Wrench,
+  Camera,
+  Zap,
+  ShieldCheck,
+  Scale,
+  Cpu,
+  Truck,
+  Award,
+  HelpCircle,
+  BarChart3,
+  RefreshCw,
 } from 'lucide-react';
 import { useAuthStore } from '../../stores/authStore';
 import { useCartStore } from '../../stores/cartStore';
@@ -18,6 +31,8 @@ export const Header: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
   const { user, logout } = useAuthStore();
@@ -186,57 +201,204 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center justify-between border-t border-slate-100 py-3 text-sm font-medium text-slate-600">
-          <div className="flex items-center gap-8">
-            <Link to="/" className="hover:text-accent-600 transition-colors">
+        <nav className="hidden md:flex items-center justify-between border-t border-slate-100 py-2.5 text-xs font-semibold text-slate-700">
+          <div className="flex items-center gap-6">
+            <Link to="/" className="hover:text-accent-600 transition-colors py-1">
               Home
             </Link>
-            <Link to="/shop" className="hover:text-accent-600 transition-colors">
+            <Link to="/shop" className="hover:text-accent-600 transition-colors py-1">
               Shop All
             </Link>
-            <Link to="/shop?isFeatured=true" className="hover:text-accent-600 transition-colors">
+            <Link to="/shop?isFeatured=true" className="hover:text-accent-600 transition-colors py-1">
               Featured Deals
             </Link>
-            <Link to="/shop?sortBy=newest" className="hover:text-accent-600 transition-colors">
-              New Arrivals
+            <Link to="/renew" className="hover:text-emerald-600 transition-colors font-bold text-emerald-700 flex items-center gap-1.5 py-1">
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Renew & Trade-in</span>
+              <span className="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded font-black">SAVE 45%</span>
             </Link>
-            <Link to="/renew" className="hover:text-emerald-600 transition-colors font-bold text-emerald-700 flex items-center gap-1">
-              <span>Renew</span>
-              <span className="text-[10px] bg-emerald-100 px-1.5 py-0.2 rounded">Save 45%</span>
-            </Link>
-            <Link to="/builder" className="hover:text-accent-600 transition-colors">
-              PC Builder
-            </Link>
-            <Link to="/visual-search" className="hover:text-accent-600 transition-colors">
-              Visual Search
-            </Link>
-            <Link to="/energy" className="hover:text-accent-600 transition-colors">
-              Energy Calc
-            </Link>
-            <Link to="/trust-center" className="hover:text-accent-600 transition-colors">
-              Trust Centre
-            </Link>
-            <Link to="/compare" className="hover:text-accent-600 transition-colors">
-              Compare
-            </Link>
-            <Link to="/compatibility" className="hover:text-accent-600 transition-colors">
-              Compatibility
-            </Link>
-            <Link to="/track" className="hover:text-accent-600 transition-colors">
-              Track Order
-            </Link>
-            <Link to="/warranty" className="hover:text-accent-600 transition-colors">
-              Warranty
-            </Link>
-            <Link to="/rewards" className="hover:text-accent-600 transition-colors">
-              Rewards
-            </Link>
-            <Link to="/support" className="hover:text-accent-600 transition-colors">
-              Support
-            </Link>
+
+            {/* Smart Hardware Tools Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setToolsDropdownOpen(true)}
+              onMouseLeave={() => setToolsDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                className="flex items-center gap-1 py-1 hover:text-accent-600 transition-colors"
+              >
+                <span>Smart Hardware Tools</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+              </button>
+
+              {toolsDropdownOpen && (
+                <div className="absolute top-full left-0 w-64 bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 z-50 animate-in fade-in duration-100 space-y-1">
+                  <Link
+                    to="/builder"
+                    onClick={() => setToolsDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-blue-50 text-accent-600 flex items-center justify-center shrink-0">
+                      <Cpu className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">PC & Setup Builder</p>
+                      <p className="text-[10px] text-slate-400">Custom workstation assembly</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/visual-search"
+                    onClick={() => setToolsDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0">
+                      <Camera className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Visual & Barcode Search</p>
+                      <p className="text-[10px] text-slate-400">AI image & UPC catalog lookup</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/compare"
+                    onClick={() => setToolsDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                      <Scale className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Product Comparison</p>
+                      <p className="text-[10px] text-slate-400">Side-by-side technical specs</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/compatibility"
+                    onClick={() => setToolsDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <Zap className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Hardware Compatibility</p>
+                      <p className="text-[10px] text-slate-400">Connector & wattage engine</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/energy"
+                    onClick={() => setToolsDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                      <Zap className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Energy Calculator</p>
+                      <p className="text-[10px] text-slate-400">Power draw & electricity costs</p>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Services & Trust Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                className="flex items-center gap-1 py-1 hover:text-accent-600 transition-colors"
+              >
+                <span>Services & Trust</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+              </button>
+
+              {servicesDropdownOpen && (
+                <div className="absolute top-full left-0 w-64 bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 z-50 animate-in fade-in duration-100 space-y-1">
+                  <Link
+                    to="/trust-center"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Trust & Verification</p>
+                      <p className="text-[10px] text-slate-400">Cryptographic authenticity check</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/track"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <Truck className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Courier Tracking</p>
+                      <p className="text-[10px] text-slate-400">Real-time airway bill milestones</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/warranty"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Digital Warranty</p>
+                      <p className="text-[10px] text-slate-400">2-Year protection certificates</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/rewards"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                      <Award className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Loyalty Rewards</p>
+                      <p className="text-[10px] text-slate-400">Points ledger & VIP benefits</p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/support"
+                    onClick={() => setServicesDropdownOpen(false)}
+                    className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+                      <HelpCircle className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-slate-900 leading-tight">Support & Repair Hub</p>
+                      <p className="text-[10px] text-slate-400">Service tickets & repair pickup</p>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex items-center gap-4 text-xs font-semibold">
-            <span className="text-secondary-600 bg-secondary-50 px-2.5 py-1 rounded-full border border-secondary-200">
+
+          <div className="flex items-center gap-3">
+            <span className="text-secondary-600 bg-secondary-50 px-2.5 py-1 rounded-full border border-secondary-200 text-[11px] font-bold">
               ⚡ Flash Deals: Up to 50% Off
             </span>
           </div>
