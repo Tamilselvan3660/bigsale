@@ -1,0 +1,4 @@
+◇ injected env (0) from .env
+🚀 BIGSALE Backend Server running at http://localhost:4000
+📚 Health check available at http://localhost:4000/api/health
+⚡ Environment: development

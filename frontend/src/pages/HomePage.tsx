@@ -14,6 +14,10 @@ import {
   Gamepad,
   Camera,
   Layers,
+  CheckCircle,
+  RefreshCw,
+  Cpu,
+  Award,
 } from 'lucide-react';
 import ProductCard from '../components/ui/ProductCard';
 import SmartBundlesSection from '../components/ui/SmartBundlesSection';
@@ -36,57 +40,61 @@ export const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16 pb-16">
-      {/* 1. HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 text-white overflow-hidden py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-accent-500/10 border border-accent-400/20 px-3.5 py-1.5 rounded-full text-accent-400 text-xs font-semibold">
-                <Sparkles className="w-3.5 h-3.5 text-accent-400" />
-                <span>GLOBAL ELECTRONICS MARKETPLACE</span>
+    <div className="space-y-10 pb-16 bg-[#F3F5F8]">
+      {/* 1. HERO PROMOTIONAL BANNER */}
+      <section className="bg-gradient-to-r from-[#0F1B2D] via-[#152A45] to-[#0F1B2D] text-white py-12 lg:py-16 border-b border-slate-700/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-[#FF9900]/20 border border-[#FF9900]/40 px-3.5 py-1 rounded-full text-[#FFD814] text-xs font-black">
+                <Zap className="w-3.5 h-3.5 fill-[#FFD814]" />
+                <span>BIGSALE MEGA SHOPPING EVENT • UP TO 50% OFF</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                Upgrade Your World with <br className="hidden sm:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                  BIGSALE
-                </span>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
+                Everything Electronic. <br />
+                <span className="text-[#FF9900]">Everything You Need.</span>
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-300 max-w-xl font-normal leading-relaxed">
-                Discover flagship smartphones, high-performance laptops, studio-grade audio, and smart home appliances with guaranteed worldwide express shipping.
+              <p className="text-sm sm:text-base text-slate-300 max-w-xl font-normal leading-relaxed">
+                Discover flagship smartphones, high-efficiency laptops, studio monitoring audio, and certified refurbished hardware backed by authentic warranties and express courier freight.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-2">
+              <div className="flex flex-col sm:flex-row items-center gap-3.5 justify-center lg:justify-start pt-2">
                 <Link
                   to="/shop"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-700 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all hover:scale-105 active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FFD814] hover:bg-[#f7ca00] text-[#0F1B2D] font-black text-sm px-8 py-3.5 rounded-xl shadow-lg transition-all hover:scale-105 active:scale-95 border border-[#e2c000]"
                 >
-                  <span>Explore Catalog</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Shop Today's Deals</span>
+                  <ArrowRight className="w-4 h-4 text-[#0F1B2D]" />
                 </Link>
+
                 <Link
-                  to="/shop?isFeatured=true"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-8 py-4 rounded-xl border border-white/20 transition-all"
+                  to="/renew"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-xl border border-white/20 transition-all"
                 >
-                  <Zap className="w-4 h-4 text-secondary-400" />
-                  <span>Featured Deals</span>
+                  <RefreshCw className="w-4 h-4 text-emerald-400" />
+                  <span>Explore Refurbished (Save 45%)</span>
                 </Link>
               </div>
             </div>
 
             <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800/40 p-4">
+              <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FF9900]/30 bg-[#152A45] p-4">
                 <img
                   src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
                   alt="Featured Electronics"
-                  className="w-full h-80 object-cover rounded-2xl"
+                  className="w-full h-72 object-cover rounded-2xl"
                 />
-                <div className="p-4 space-y-1">
-                  <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Premium Sound</span>
-                  <h3 className="text-lg font-bold text-white">Spatial Audio Headphones</h3>
-                  <p className="text-xs text-slate-400">Starting from $299.00</p>
+                <div className="p-3.5 space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-black text-[#FFD814] uppercase tracking-wider">Editor's Choice</span>
+                    <span className="text-xs font-black text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded">SAVE $120</span>
+                  </div>
+                  <h3 className="text-base font-bold text-white">Spatial Wireless ANC Headphones</h3>
+                  <p className="text-xs text-slate-300">
+                    From <span className="text-[#FF9900] font-black text-sm">$299.00</span> <span className="line-through text-slate-500 text-[11px]">$419.00</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -94,61 +102,154 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. VALUE PROPOSITIONS */}
+      {/* 2. TRUST INFORMATION STRIP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white rounded-2xl p-5 sm:p-6 border border-[#D9E0E8] shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-blue-50 text-accent-600 flex items-center justify-center shrink-0">
-              <Truck className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-xl bg-amber-50 text-[#FF9900] flex items-center justify-center shrink-0">
+              <Truck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-slate-900">Global Shipping</h4>
-              <p className="text-xs text-slate-500">Fast delivery worldwide</p>
+              <h4 className="text-xs font-bold text-[#172337]">Free Express Delivery</h4>
+              <p className="text-[11px] text-[#667085]">On orders over $99.00</p>
             </div>
           </div>
+
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-xl bg-emerald-50 text-[#168A43] flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-slate-900">Secure Payments</h4>
-              <p className="text-xs text-slate-500">256-bit encrypted checkout</p>
+              <h4 className="text-xs font-bold text-[#172337]">100% Genuine Hardware</h4>
+              <p className="text-[11px] text-[#667085]">Cryptographic OEM verification</p>
             </div>
           </div>
+
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-              <RotateCcw className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <RotateCcw className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-slate-900">Easy Returns</h4>
-              <p className="text-xs text-slate-500">30-day money back</p>
+              <h4 className="text-xs font-bold text-[#172337]">30-Day Easy Returns</h4>
+              <p className="text-[11px] text-[#667085]">Risk-free money-back guarantee</p>
             </div>
           </div>
+
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-              <Zap className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+              <Award className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-slate-900">24/7 Support</h4>
-              <p className="text-xs text-slate-500">Dedicated assistance</p>
+              <h4 className="text-xs font-bold text-[#172337]">2-Year Warranty</h4>
+              <p className="text-[11px] text-[#667085]">Full international coverage</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. FEATURED CATEGORIES */}
+      {/* 3. BIGSALE 5 SMART SHOPPING INNOVATION TILES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between mb-8">
+        <div className="mb-4">
+          <h2 className="text-xl font-black text-[#172337]">BIGSALE Intelligent Hardware Services</h2>
+          <p className="text-xs text-[#667085]">Next-generation shopping utilities engineered for tech buyers</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <Link
+            to="/renew"
+            className="bg-white rounded-2xl border border-[#D9E0E8] hover:border-emerald-500 hover:shadow-md p-4 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                <RefreshCw className="w-5 h-5" />
+              </div>
+              <h3 className="text-xs font-bold text-[#172337] group-hover:text-emerald-700">BIGSALE Renew</h3>
+              <p className="text-[11px] text-[#667085] mt-1 leading-relaxed">Certified refurbished gadgets & trade-in cash valuation.</p>
+            </div>
+            <span className="text-[11px] font-bold text-emerald-600 mt-3 flex items-center gap-1">
+              Explore Renew →
+            </span>
+          </Link>
+
+          <Link
+            to="/builder"
+            className="bg-white rounded-2xl border border-[#D9E0E8] hover:border-[#FF9900] hover:shadow-md p-4 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-amber-50 text-[#FF9900] flex items-center justify-center mb-3">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <h3 className="text-xs font-bold text-[#172337] group-hover:text-[#FF9900]">PC Setup Builder</h3>
+              <p className="text-[11px] text-[#667085] mt-1 leading-relaxed">Assemble custom rigs with real-time socket & wattage validation.</p>
+            </div>
+            <span className="text-[11px] font-bold text-[#FF9900] mt-3 flex items-center gap-1">
+              Build Rig →
+            </span>
+          </Link>
+
+          <Link
+            to="/visual-search"
+            className="bg-white rounded-2xl border border-[#D9E0E8] hover:border-blue-500 hover:shadow-md p-4 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-xs font-bold text-[#172337] group-hover:text-blue-700">Visual & Barcode Search</h3>
+              <p className="text-[11px] text-[#667085] mt-1 leading-relaxed">Upload a product photo or scan retail barcode instantly.</p>
+            </div>
+            <span className="text-[11px] font-bold text-blue-600 mt-3 flex items-center gap-1">
+              Scan Photo →
+            </span>
+          </Link>
+
+          <Link
+            to="/energy"
+            className="bg-white rounded-2xl border border-[#D9E0E8] hover:border-amber-500 hover:shadow-md p-4 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center mb-3">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h3 className="text-xs font-bold text-[#172337] group-hover:text-yellow-700">Energy Calculator</h3>
+              <p className="text-[11px] text-[#667085] mt-1 leading-relaxed">Calculate monthly kWh draw and electricity operating costs.</p>
+            </div>
+            <span className="text-[11px] font-bold text-yellow-700 mt-3 flex items-center gap-1">
+              Calculate Cost →
+            </span>
+          </Link>
+
+          <Link
+            to="/trust-center"
+            className="bg-white rounded-2xl border border-[#D9E0E8] hover:border-indigo-500 hover:shadow-md p-4 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-xs font-bold text-[#172337] group-hover:text-indigo-700">Trust Centre</h3>
+              <p className="text-[11px] text-[#667085] mt-1 leading-relaxed">Verify OEM serial numbers and view supply-chain authenticity.</p>
+            </div>
+            <span className="text-[11px] font-bold text-indigo-600 mt-3 flex items-center gap-1">
+              Verify Serial →
+            </span>
+          </Link>
+        </div>
+      </section>
+
+      {/* 4. FEATURED HARDWARE CATEGORIES */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-2xl font-black text-slate-900">Shop by Category</h2>
-            <p className="text-sm text-slate-500">Browse devices engineered for peak performance</p>
+            <h2 className="text-xl font-black text-[#172337]">Shop by Department</h2>
+            <p className="text-xs text-[#667085]">Explore high-performance electronics engineered for creators & consumers</p>
           </div>
-          <Link to="/shop" className="text-xs font-bold text-accent-600 hover:text-accent-700 flex items-center gap-1 group">
-            View All <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          <Link to="/shop" className="text-xs font-bold text-[#FF9900] hover:underline flex items-center gap-1">
+            Browse All <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
           {(categories && categories.length > 0
             ? categories.slice(0, 6)
             : [
@@ -165,12 +266,12 @@ export const HomePage: React.FC = () => {
               <Link
                 key={cat.id}
                 to={`/shop?categoryId=${cat.id}`}
-                className="bg-white rounded-2xl p-5 text-center flex flex-col items-center justify-center space-y-3 border border-slate-200/80 hover:border-accent-400 hover:shadow-md transition-all group"
+                className="bg-white rounded-2xl p-4 text-center flex flex-col items-center justify-center space-y-2 border border-[#D9E0E8] hover:border-[#FF9900] hover:shadow-md transition-all group"
               >
-                <div className="w-12 h-12 rounded-xl bg-slate-50 text-slate-700 flex items-center justify-center group-hover:bg-accent-50 group-hover:text-accent-600 transition-colors">
-                  <Icon className="w-6 h-6" />
+                <div className="w-11 h-11 rounded-xl bg-slate-50 text-[#0F1B2D] flex items-center justify-center group-hover:bg-amber-50 group-hover:text-[#FF9900] transition-colors">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-bold text-slate-800 group-hover:text-accent-600 transition-colors">
+                <span className="text-xs font-bold text-[#172337] group-hover:text-[#FF9900] transition-colors">
                   {cat.name}
                 </span>
               </Link>
@@ -179,47 +280,47 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. TRENDING PRODUCTS */}
+      {/* 5. TODAY'S DEALS & BEST SELLERS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-2xl font-black text-slate-900">Trending Hardware</h2>
-            <p className="text-sm text-slate-500">Top-rated items loved by tech enthusiasts</p>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#D93025] animate-ping" />
+            <h2 className="text-xl font-black text-[#172337]">Today's Mega Deals & Promotions</h2>
           </div>
-          <Link to="/shop?sortBy=rating" className="text-xs font-bold text-accent-600 hover:text-accent-700 flex items-center gap-1 group">
-            Browse All <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          <Link to="/shop?isFeatured=true" className="text-xs font-bold text-[#FF9900] hover:underline flex items-center gap-1">
+            See All Deals <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {loadingTrending
-            ? Array.from({ length: 4 }).map((_, i) => <ProductCard key={i} isLoading={true} />)
-            : trendingProducts.slice(0, 4).map((product) => <ProductCard key={product.id} product={product} />)}
-        </div>
-      </section>
-
-      {/* 5. FEATURED DEALS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-2xl font-black text-slate-900">Featured Deals</h2>
-            <p className="text-sm text-slate-500">Handpicked promotions with limited quantities</p>
-          </div>
-          <Link to="/shop?isFeatured=true" className="text-xs font-bold text-accent-600 hover:text-accent-700 flex items-center gap-1 group">
-            All Deals <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {loadingFeatured
             ? Array.from({ length: 4 }).map((_, i) => <ProductCard key={i} isLoading={true} />)
             : (featuredProducts || []).slice(0, 4).map((product) => <ProductCard key={product.id} product={product} />)}
         </div>
       </section>
 
-      {/* 6. SMART BUNDLES & COMBO SAVINGS */}
+      {/* 6. SMART BUNDLES & COMBO PACKS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SmartBundlesSection />
+      </section>
+
+      {/* 7. TRENDING HARDWARE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-xl font-black text-[#172337]">Trending Electronics</h2>
+            <p className="text-xs text-[#667085]">Top-rated by verified consumer benchmarks</p>
+          </div>
+          <Link to="/shop?sortBy=rating" className="text-xs font-bold text-[#FF9900] hover:underline flex items-center gap-1">
+            Browse All <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {loadingTrending
+            ? Array.from({ length: 4 }).map((_, i) => <ProductCard key={i} isLoading={true} />)
+            : trendingProducts.slice(0, 4).map((product) => <ProductCard key={product.id} product={product} />)}
+        </div>
       </section>
     </div>
   );
