@@ -48,6 +48,167 @@
 
 ---
 
+## 🏛️ Platform Architecture & Block Diagrams
+
+### 1. High-Level System Architecture Diagram
+
+```mermaid
+graph TD
+    subgraph Client["Client Tier (Frontend - React 19 + Vite)"]
+        UI["Amazon-Inspired Marketplace Storefront"]
+        AuthUI["Auth & Account Portal"]
+        RenewUI["BIGSALE Renew & Trade-in"]
+        ToolsUI["Setup Builder & Energy Calc"]
+        AdminUI["Admin & Analytics Dashboard"]
+    end
+
+    subgraph Security["Edge & API Gateway Layer"]
+        CORS["CORS Policy"]
+        Helmet["Helmet Security Headers"]
+        RateLimit["Rate Limiting (500 req/15m & Strict Auth)"]
+        JWTMiddleware["JWT Authentication Middleware"]
+    end
+
+    subgraph Backend["Application Server Tier (Node.js + Express 5)"]
+        Router["Express REST API Router (/api)"]
+        AuthCtrl["Auth Controller"]
+        EmailService["SMTP Email Service (Nodemailer)"]
+        ProductCtrl["Products & Renew Controller"]
+        BuilderCtrl["Setup Builder & Compatibility Engine"]
+        EnergyCtrl["Energy Intelligence Engine"]
+        TrustCtrl["Trust & Authenticity Engine"]
+        OrderCtrl["Checkout & Order Management"]
+    end
+
+    subgraph DataTier["Data & External Services Tier"]
+        MockDB[("Data Store / Mock Prisma\n(data.json / PostgreSQL Schema)")]
+        SMTPServer["SMTP Server\n(Gmail / SES / SendGrid)"]
+        Stripe["Stripe Payments API"]
+    end
+
+    UI --> Security
+    AuthUI --> Security
+    RenewUI --> Security
+    ToolsUI --> Security
+    AdminUI --> Security
+
+    Security --> Router
+    Router --> AuthCtrl
+    Router --> EmailService
+    Router --> ProductCtrl
+    Router --> BuilderCtrl
+    Router --> EnergyCtrl
+    Router --> TrustCtrl
+    Router --> OrderCtrl
+
+    AuthCtrl --> EmailService
+    AuthCtrl --> MockDB
+    ProductCtrl --> MockDB
+    BuilderCtrl --> MockDB
+    TrustCtrl --> MockDB
+    OrderCtrl --> MockDB
+    OrderCtrl --> Stripe
+    EmailService --> SMTPServer
+```
+
+---
+
+## 🔄 Core Workflows & Flowcharts
+
+### 1. Customer Authentication & Email Verification Flow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Customer
+    participant Front as Frontend (React)
+    participant Auth as Auth Controller
+    participant DB as Prisma / Data Store
+    participant Mailer as SMTP Mailer
+    actor Inbox as Customer Email Inbox
+
+    User->>Front: Enter registration details
+    Front->>Auth: POST /api/auth/register
+    Auth->>DB: Check email duplicate & hash password (bcrypt)
+    Auth->>DB: Create User record (isVerified = false)
+    Auth-->>Front: Set HTTP-only JWT Cookie & return 201 Created
+    
+    rect rgb(240, 248, 255)
+        Note over Auth,Mailer: Asynchronous Non-blocking Email Dispatch
+        Auth->>DB: Store EmailVerification token hash & expiry
+        Auth->>Mailer: sendEmail(welcomeTemplate)
+        Mailer->>Inbox: Dispatch Welcome & Verification Link
+    end
+
+    User->>Inbox: Click "Verify Email" link
+    Inbox->>Auth: GET /api/email/verify-email?token=...
+    Auth->>DB: Validate token hash & expiration
+    Auth->>DB: Mark user isVerified = true, mark token used
+    Auth-->>Front: Redirect to /verify-email?success=true
+    Front-->>User: Show verified status & unlocked features
+```
+
+### 2. Multi-Factor OTP Verification Lifecycle
+
+```mermaid
+flowchart TD
+    Start([User requests OTP]) --> InputCheck{Valid Email & Purpose?}
+    InputCheck -- No --> Ret400[Return 400 Bad Request]
+    InputCheck -- Yes --> UserCheck{User exists?}
+    UserCheck -- No --> FakeOk[Return 200 generic message\nAnti-enumeration safe]
+    UserCheck -- Yes --> CooldownCheck{Within 60s cooldown?}
+    
+    CooldownCheck -- Yes --> Ret429[Return 429 Too Many Requests]
+    CooldownCheck -- No --> GenOTP[Generate 6-digit random code]
+    
+    GenOTP --> HashOTP[Hash code with bcrypt salt]
+    HashOTP --> SaveOTP[Save hashed code, expiry & reset attempts to DB]
+    SaveOTP --> SendMail[Dispatch branded HTML OTP email via SMTP]
+    SendMail --> WaitInput[Customer enters 6-digit OTP]
+    
+    WaitInput --> VerifyCall[POST /api/email/verify-otp]
+    VerifyCall --> ExpireCheck{Expired or not found?}
+    ExpireCheck -- Yes --> ExpiredErr[Return 400 Expired / Request new]
+    
+    ExpireCheck -- No --> AttemptCheck{Attempts >= 5?}
+    AttemptCheck -- Yes --> LockErr[Delete OTP & Return 429 Max attempts exceeded]
+    
+    AttemptCheck -- No --> MatchCheck{bcrypt.compare code == hash?}
+    MatchCheck -- No --> IncAttempt[Increment attempt counter\nReturn 400 with remaining attempts]
+    MatchCheck -- Yes --> Success[Delete OTP record\nMark purpose verified / Login user]
+    Success --> Done([Authentication Complete])
+```
+
+### 3. PC Setup Builder Compatibility & Power Flow
+
+```mermaid
+flowchart LR
+    SelectParts["1. User selects parts\n(CPU, GPU, MB, RAM, PSU)"] --> ValidationAPI["2. POST /api/setup-builder/validate"]
+    
+    subgraph Engine["Intelligent Rules Engine"]
+        SocketCheck{"CPU Socket ==\nMotherboard Socket?"}
+        RamCheck{"RAM Type ==\nMotherboard DDR?"}
+        PowerCalc["Sum TDP + 20% Overhead Margin"]
+        WattCheck{"PSU Wattage >=\nRequired TDP?"}
+    end
+
+    ValidationAPI --> SocketCheck
+    SocketCheck -- Mismatch --> Warn1["Flag Socket Incompatibility"]
+    SocketCheck -- Match --> RamCheck
+    RamCheck -- Mismatch --> Warn2["Flag Memory Standard Mismatch"]
+    RamCheck -- Match --> PowerCalc
+    PowerCalc --> WattCheck
+    WattCheck -- Underpowered --> Warn3["Flag PSU Underpowered Alert"]
+    WattCheck -- Sufficient --> AllGood["All Components Compatible ✅"]
+
+    Warn1 --> Summary["Generate Diagnostics Report & Buy Box"]
+    Warn2 --> Summary
+    Warn3 --> Summary
+    AllGood --> Summary
+```
+
+---
+
 ## 🎨 Design System & Theme
 
 BIGSALE features a conversion-focused Amazon-inspired marketplace theme:
