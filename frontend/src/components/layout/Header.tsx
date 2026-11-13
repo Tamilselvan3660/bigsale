@@ -200,6 +200,22 @@ export const Header: React.FC = () => {
             <Link to="/shop?sortBy=newest" className="hover:text-accent-600 transition-colors">
               New Arrivals
             </Link>
+            <Link to="/renew" className="hover:text-emerald-600 transition-colors font-bold text-emerald-700 flex items-center gap-1">
+              <span>Renew</span>
+              <span className="text-[10px] bg-emerald-100 px-1.5 py-0.2 rounded">Save 45%</span>
+            </Link>
+            <Link to="/builder" className="hover:text-accent-600 transition-colors">
+              PC Builder
+            </Link>
+            <Link to="/visual-search" className="hover:text-accent-600 transition-colors">
+              Visual Search
+            </Link>
+            <Link to="/energy" className="hover:text-accent-600 transition-colors">
+              Energy Calc
+            </Link>
+            <Link to="/trust-center" className="hover:text-accent-600 transition-colors">
+              Trust Centre
+            </Link>
             <Link to="/compare" className="hover:text-accent-600 transition-colors">
               Compare
             </Link>

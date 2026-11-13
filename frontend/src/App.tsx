@@ -22,6 +22,11 @@ import TrackingPage from './pages/TrackingPage';
 import RewardsPage from './pages/RewardsPage';
 import SupportPage from './pages/SupportPage';
 import AdminAnalyticsPage from './pages/AdminAnalyticsPage';
+import RenewPage from './pages/RenewPage';
+import VisualSearchPage from './pages/VisualSearchPage';
+import SetupBuilderPage from './pages/SetupBuilderPage';
+import EnergyCalculatorPage from './pages/EnergyCalculatorPage';
+import TrustCenterPage from './pages/TrustCenterPage';
 
 import ComparisonFloatingBar from './components/ui/ComparisonFloatingBar';
 import ChatAssistant from './components/ui/ChatAssistant';
@@ -62,6 +67,11 @@ export default function App() {
               <Route path="/rewards" element={<RewardsPage />} />
               <Route path="/support" element={<SupportPage />} />
               <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
+              <Route path="/renew" element={<RenewPage />} />
+              <Route path="/visual-search" element={<VisualSearchPage />} />
+              <Route path="/builder" element={<SetupBuilderPage />} />
+              <Route path="/energy" element={<EnergyCalculatorPage />} />
+              <Route path="/trust-center" element={<TrustCenterPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>

@@ -14,6 +14,7 @@ import trustRoutes from './trust.routes';
 import personalizationRoutes from './personalization.routes';
 import retentionRoutes from './retention.routes';
 import enterpriseRoutes from './enterprise.routes';
+import expansionRoutes from './expansion.routes';
 
 const router = Router();
 
@@ -43,5 +44,6 @@ router.use('/', trustRoutes);
 router.use('/', personalizationRoutes);
 router.use('/', retentionRoutes);
 router.use('/', enterpriseRoutes);
+router.use('/', expansionRoutes);
 
 export default router;
