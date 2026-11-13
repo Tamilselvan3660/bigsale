@@ -332,3 +332,4 @@ export const resetPassword = async (req: Request, res: Response, next: NextFunct
     res.status(200).json({ success: true, message: 'Password reset successfully. You can now log in with your new password.' });
   } catch (err) { next(err); }
 };
+

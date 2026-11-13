@@ -51,3 +51,4 @@ router.get('/verify-email', verifyEmail);
 router.post('/resend-verification', protect, resendVerification);
 
 export default router;
+

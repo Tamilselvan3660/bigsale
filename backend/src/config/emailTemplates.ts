@@ -165,3 +165,4 @@ export const announcementTemplate = (
     ${ctaText && ctaUrl ? `<div style="text-align:center;"><a class="btn" href="${ctaUrl}">${ctaText}</a></div>` : ''}
     <p class="security-note">You received this because you are a registered BIGSALE customer. To unsubscribe, update your preferences in account settings.</p>
   `, headline);
+
